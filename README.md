@@ -118,13 +118,23 @@ The following table summarizes the duration, traveled distance, sensor availabil
 
 ### `berlin_00`
 
-| Velodyne | Ouster | Livox | ZED 2i | Xsens IMU | 3× u-blox | Xsens GNSS | 3× RINEX | Sonar |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-<p align="center">
+<!-- <p align="center">
 <img src="figures/berlin_00_path.png" alt="berlin_00 path" height="280" style="margin-right:12px;" />
 <img src="figures/berlin_00_gif.gif" alt="berlin_00 gif" height="280" />
+</p> -->
+
+<p align="center">
+  <img src="figures/berlin_00_path.png"
+       alt="berlin_00 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_00_gif.gif"
+       alt="berlin_00 gif"
+       width="48%" />
 </p>
 
 **Comments:** This scene ..
@@ -132,13 +142,23 @@ The following table summarizes the duration, traveled distance, sensor availabil
 
 ### `berlin_01`
 
-| Velodyne | Ouster | Livox | ZED 2i | Xsens IMU | 3× u-blox | Xsens GNSS | 3× RINEX | Sonar |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-<p align="center">
+<!-- <p align="center">
 <img src="figures/berlin_01_path.png" alt="berlin_01 path" height="280" style="margin-right:12px;" />
 <img src="figures/berlin_01_gif.gif" alt="berlin_01 gif" height="280" />
+</p> -->
+
+<p align="center">
+  <img src="figures/berlin_01_path.png"
+       alt="berlin_01 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_01_gif.gif"
+       alt="berlin_01 gif"
+       width="48%" />
 </p>
 
 **Comments:** This scene ..
