@@ -55,8 +55,7 @@ The coordinates transformation between multiple sensors, and intrinsic parameter
 
 ## Scene Overview
 
-The following table summarizes the duration, traveled distance, sensor availability, and operating conditions of each recorded scene.
-
+The following table summarizes date of collection, file size, the duration and traveled distance.
 <!--
 | Scene | Date of Collection | File Size | Duration [min] | Distance [km] | Velodyne LiDAR | Ouster LiDAR | Livox LiDAR | ZED 2i Camera | Xsens IMU | 3× u-blox | Xsens GNSS | 3× RINEX | Sonar | Description |
 |:---|:---|:---|---:|---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---|
@@ -122,11 +121,6 @@ The following table summarizes the duration, traveled distance, sensor availabil
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-<!-- <p align="center">
-<img src="figures/berlin_00_path.png" alt="berlin_00 path" height="280" style="margin-right:12px;" />
-<img src="figures/berlin_00_gif.gif" alt="berlin_00 gif" height="280" />
-</p> -->
-
 <p align="center">
   <img src="figures/berlin_00_path.png"
        alt="berlin_00 path"
@@ -146,11 +140,6 @@ The following table summarizes the duration, traveled distance, sensor availabil
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-<!-- <p align="center">
-<img src="figures/berlin_01_path.png" alt="berlin_01 path" height="280" style="margin-right:12px;" />
-<img src="figures/berlin_01_gif.gif" alt="berlin_01 gif" height="280" />
-</p> -->
-
 <p align="center">
   <img src="figures/berlin_01_path.png"
        alt="berlin_01 path"
@@ -161,19 +150,366 @@ The following table summarizes the duration, traveled distance, sensor availabil
        width="48%" />
 </p>
 
-**Comments:** This scene ..
+**Comments:** This scene captures a port area with loop closure and vessel traffic.
 
-> Additional scene overview sections will be added progressively for the remaining scenes.
+### `berlin_02`
 
-<!-- ### `berlin_21`
-
-| Velodyne | Ouster | Livox | ZED 2i | Xsens IMU | 3× u-blox | Xsens GNSS | 3× RINEX | Sonar |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 <p align="center">
-<img src="figures/berlin_21_path.png" alt="berlin_21 path" height="280" style="margin-right:12px;" />
-<img src="figures/berlin_21_gif.gif" alt="berlin_21 gif" height="280" />
+  <img src="figures/berlin_02_path.png"
+       alt="berlin_02 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_02_gif.gif"
+       alt="berlin_02 gif"
+       width="48%" />
 </p>
 
-**Comments:** This scene .. -->
+**Comments:** This scene captures a port area with loop closure and vessel traffic.
+
+### `berlin_03`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_03_path.png"
+       alt="berlin_03 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_03_gif.gif"
+       alt="berlin_03 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures a port area with loop closure and vessel traffic.
+
+### `berlin_04`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_04_path.png"
+       alt="berlin_04 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_04_gif.gif"
+       alt="berlin_04 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures port and vegetation-dominated areas with loop closure and bridges.
+
+### `berlin_05`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_05_path.png"
+       alt="berlin_05 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_05_gif.gif"
+       alt="berlin_05 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures port and vegetation-dominated areas with loop closure and bridges.
+
+### `berlin_06`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_06_path.png"
+       alt="berlin_06 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_06_gif.gif"
+       alt="berlin_06 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures a vegetation-dominated area with loop closure.
+
+### `berlin_07`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_07_path.png"
+       alt="berlin_07 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_07_gif.gif"
+       alt="berlin_07 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures an urban area with a bridge passage.
+
+### `berlin_08`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_08_path.png"
+       alt="berlin_08 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_08_gif.gif"
+       alt="berlin_08 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures a lock entry and exit.
+
+### `berlin_09`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
+
+<p align="center">
+  <img src="figures/berlin_09_path.png"
+       alt="berlin_09 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_09_gif.gif"
+       alt="berlin_09 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures a lock entry and exit.
+
+### `berlin_10`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_10_path.png"
+       alt="berlin_10 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_10_gif.gif"
+       alt="berlin_10 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures port, urban, and vegetation-dominated areas in a narrow channel.
+
+### `berlin_11`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
+
+<p align="center">
+  <img src="figures/berlin_11_path.png"
+       alt="berlin_11 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_11_gif.gif"
+       alt="berlin_11 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures urban and vegetation-dominated areas with loop closure.
+
+### `berlin_12`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_12_path.png"
+       alt="berlin_12 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_12_gif.gif"
+       alt="berlin_12 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures urban and vegetation-dominated areas with loop closure.
+
+### `berlin_13`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_13_path.png"
+       alt="berlin_13 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_13_gif.gif"
+       alt="berlin_13 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures a narrow channel with a bridge passage.
+
+### `berlin_14`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_14_path.png"
+       alt="berlin_14 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_14_gif.gif"
+       alt="berlin_14 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures an urban area with a bridge passage.
+
+### `berlin_15`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_15_path.png"
+       alt="berlin_15 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_15_gif.gif"
+       alt="berlin_15 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures urban and vegetation-dominated areas with vessel traffic.
+
+### `berlin_16`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_16_path.png"
+       alt="berlin_16 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_16_gif.gif"
+       alt="berlin_16 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures urban and vegetation-dominated areas with vessel traffic.
+
+### `berlin_17`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✗ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+<p align="center">
+  <img src="figures/berlin_17_path.png"
+       alt="berlin_17 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_17_gif.gif"
+       alt="berlin_17 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures a vegetation-dominated area with vessel traffic and bridges.
+
+### `berlin_18`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
+
+<p align="center">
+  <img src="figures/berlin_18_path.png"
+       alt="berlin_18 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_18_gif.gif"
+       alt="berlin_18 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures urban and vegetation-dominated areas with vessel traffic and bridges.
+
+### `berlin_19`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
+
+<p align="center">
+  <img src="figures/berlin_19_path.png"
+       alt="berlin_19 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_19_gif.gif"
+       alt="berlin_19 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures a port area with loop closure, bridges, and vessel traffic.
+
+### `berlin_20`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
+
+<p align="center">
+  <img src="figures/berlin_20_path.png"
+       alt="berlin_20 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_20_gif.gif"
+       alt="berlin_20 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures a narrow channel with vessel traffic and bridges.
+
+### `berlin_21`
+
+| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
+
+<p align="center">
+  <img src="figures/berlin_21_path.png"
+       alt="berlin_21 path"
+       width="48%" />
+  &nbsp;
+  <img src="figures/berlin_21_gif.gif"
+       alt="berlin_21 gif"
+       width="48%" />
+</p>
+
+**Comments:** This scene captures urban and vegetation-dominated areas with vessel traffic and bridges.
+
+> Additional scene overview sections will be added progressively for the remaining scenes.
