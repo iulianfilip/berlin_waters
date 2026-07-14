@@ -51,9 +51,12 @@ The data-collection platform "Aurora" measures 6.5 m long × 2.6 m wide × 2.8 m
 
 ## Intrinsic and Extrinsic Parameters
 
-The coordinates transformation between multiple sensors, and intrinsic parameters of camera are the same for all scenes and can be found via link_to_params(Intrinsic and Extrinsic Parameters).
+The coordinates transformation between multiple sensors, and intrinsic parameters of camera are the same for all scenes and can be found via 
+> <p style="color:red;">Link to Intrinsic and Extrinsic Parameters</p>
 
 ## Scene Overview
+
+> <p style="color:red;">Access the dataset here. Link will be available soon.</p>
 
 The following table summarizes date of collection, file size, the duration and traveled distance.
 <!--
@@ -112,8 +115,8 @@ The following table summarizes date of collection, file size, the duration and t
 | `berlin_20` | May 20, 2025 | 84.5 GB | 19.5 | 2.28 |
 | `berlin_21` | May 20, 2025 | 50.0 GB | 12.0 | 1.84 |
 
-## Scene Details
 
+## Scene Details
 
 ### `berlin_00`
 
@@ -131,7 +134,7 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene ..
+**Comments:** This scene covers a port area with aggressive maneuvers by the data collecting platform and a clear loop-closure opportunity.
 
 
 ### `berlin_01`
@@ -150,7 +153,7 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures a port area with loop closure and vessel traffic.
+**Comments:** This scene covers a port area with a bridge passing and a clear loop-closure opportunity.
 
 ### `berlin_02`
 
@@ -168,7 +171,7 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures a port area with loop closure and vessel traffic.
+**Comments:** This scene covers a port area with a loop-closure opportunity.
 
 ### `berlin_03`
 
@@ -186,7 +189,7 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures a port area with loop closure and vessel traffic.
+**Comments:** This scene covers a port area with a loop-closure opportunity.
 
 ### `berlin_04`
 
@@ -204,7 +207,7 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures port and vegetation-dominated areas with loop closure and bridges.
+**Comments:** This scene covers port and vegetation-dominated areas with a loop-closure opportunity, bridge passings, and vessel encounters.
 
 ### `berlin_05`
 
@@ -222,11 +225,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures port and vegetation-dominated areas with loop closure and bridges.
+**Comments:** This scene covers port and vegetation-dominated areas with a loop-closure opportunity, bridge passings, and vessel encounters.
 
 ### `berlin_06`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster + IMU | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
@@ -240,13 +243,13 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures a vegetation-dominated area with loop closure.
+**Comments:** This scene covers a forward and backward vegetation-dominated canal trajectory.
 
 ### `berlin_07`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster + IMU | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
 
 <p align="center">
   <img src="figures/berlin_07_path.png"
@@ -258,11 +261,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures an urban area with a bridge passage.
+**Comments:** This scene covers an urban area with bridge passings and vessel encounters. Sonar data is available only near the end of the trajectory.
 
 ### `berlin_08`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster + IMU | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
@@ -276,11 +279,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures a lock entry and exit.
+**Comments:** This scene covers entry into and exit from a lock.
 
 ### `berlin_09`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster + IMU | livox + IMU | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
 
@@ -294,7 +297,7 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures a lock entry and exit.
+**Comments:** This scene covers entry into and exit from a lock, including a vessel encounter.
 
 ### `berlin_10`
 
@@ -312,11 +315,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures port, urban, and vegetation-dominated areas in a narrow channel.
+**Comments:** This scene follows a long one-way trajectory through port, urban, and vegetation-dominated areas along a narrow channel, including an encounter with vessels engaged in maintenance operations.
 
 ### `berlin_11`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster + IMU | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
 
@@ -330,11 +333,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures urban and vegetation-dominated areas with loop closure.
+**Comments:** This large scale scene covers urban and vegetation-dominated areas with multiple loop-closure opportunities, vessel encounters, and a port-area segment.
 
 ### `berlin_12`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster | livox + IMU | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
@@ -348,11 +351,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures urban and vegetation-dominated areas with loop closure.
+**Comments:** This large scale scene covers urban and vegetation-dominated areas with multiple loop-closure opportunities, vessel encounters, and a port-area segment. Livox LiDAR data is unavailable near the end of the trajectory.
 
 ### `berlin_13`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster | livox + IMU | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
@@ -366,11 +369,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures a narrow channel with a bridge passage.
+**Comments:** This scene covers a narrow channel with multiple bridge passings and an encounter with vessels engaged in maintenance operations.
 
 ### `berlin_14`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster | livox + IMU | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
@@ -384,11 +387,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures an urban area with a bridge passage.
+**Comments:** This scene covers an urban area with multiple bridge passings and vessel encounters.
 
 ### `berlin_15`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster | livox + IMU | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
@@ -402,11 +405,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures urban and vegetation-dominated areas with vessel traffic.
+**Comments:** This schort scene covers urban and vegetation-dominated areas with vessel encounters, including bridge passings.
 
 ### `berlin_16`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster | livox + IMU | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
@@ -420,7 +423,7 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures urban and vegetation-dominated areas with vessel traffic.
+**Comments:** This short scene covers urban and vegetation-dominated areas with vessel encounters, including bridge passings.
 
 ### `berlin_17`
 
@@ -438,11 +441,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures a vegetation-dominated area with vessel traffic and bridges.
+**Comments:** This scene covers a vegetation-dominated area along a wide channel, with bridge passings and vessel encounters.
 
 ### `berlin_18`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster + IMU | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
 
@@ -456,11 +459,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures urban and vegetation-dominated areas with vessel traffic and bridges.
+**Comments:** This scene covers urban and vegetation-dominated areas with bridge passings and vessel encounters.
 
 ### `berlin_19`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster + IMU | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
 
@@ -474,11 +477,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures a port area with loop closure, bridges, and vessel traffic.
+**Comments:** This scene covers a port area with a loop-closure opportunity, bridge passings, and vessel encounters.
 
 ### `berlin_20`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster + IMU | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
 
@@ -492,11 +495,11 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures a narrow channel with vessel traffic and bridges.
+**Comments:** This scene covers a narrow channel with bridge passings and an encounter with vessels engaged in maintenance operations.
 
 ### `berlin_21`
 
-| velodyne | ouster | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
+| velodyne | ouster + IMU | livox | zed2i | xsens IMU + GNSS | 3× u-blox | 3× RINEX | Sonar |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
 
@@ -510,6 +513,41 @@ The following table summarizes date of collection, file size, the duration and t
        width="48%" />
 </p>
 
-**Comments:** This scene captures urban and vegetation-dominated areas with vessel traffic and bridges.
+**Comments:** This scene covers urban and vegetation-dominated areas along a wide channel, with bridge passings and vessel encounters.
 
-> Additional scene overview sections will be added progressively for the remaining scenes.
+## Repeated-Environment Scene Groups
+
+Several groups of scenes traverse the same or substantially overlapping environments at different times. These repeated-environment groups can be used to evaluate cross-session mapping consistency and compare algorithm performance under changing environmental and traffic conditions.
+
+- `berlin_00` and `berlin_01`
+- `berlin_02` and `berlin_03`
+- `berlin_04`, `berlin_05`, and `berlin_19`
+- `berlin_07` and `berlin_14`
+- `berlin_11` and `berlin_12`
+- `berlin_13` and `berlin_20`
+- `berlin_17` and `berlin_21`
+
+
+## SLAM Results
+
+LIO-SAM on the `berlin_01` scene, with and without GPS integration:
+
+![slam_berlin_01](figures/slam_berlin_01_gif.gif)
+
+## Segmentation Results
+
+Qualitative semantic segmentation results: Each row shows the resized input image, ground truth, and predictions from U-Net Convolutional Network, Fully Convolutional Networks, and the Residual Network-based model across different scenes.
+
+![segmentation_results](figures/segmentation_results.png)
+
+## GNSS RINEX Results
+
+> <p style="color:red;">Add GNSS RINEX plots here</p>
+
+## Acknowledgements
+
+We thank all our colleagues who contributed during data collection campaign and for preparation of this dataset.
+
+## License
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License and is provided for non-commercial but academic use. If you are interested in using this dataset for commercial purposes, please contact us.
