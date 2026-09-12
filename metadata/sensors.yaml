@@ -1,0 +1,108 @@
+schema_version: 1
+source: README.md
+sensors:
+  velodyne:
+    display_name: Velodyne VLP-32C
+    category: lidar
+    nominal_rate_hz: 10
+    topics:
+      - name: /VLP32/velodyne_points
+        role: point_cloud
+        required: true
+
+  ouster:
+    display_name: Ouster OS0-128
+    category: lidar
+    nominal_rate_hz: 10
+    topics:
+      - name: /ouster/points
+        role: point_cloud
+        required: true
+      - name: /ouster/imu
+        role: imu
+        required: true
+
+  livox:
+    display_name: Livox Avia
+    category: lidar
+    nominal_rate_hz: 10
+    topics:
+      - name: /livox/lidar
+        role: point_cloud
+        required: true
+      - name: /livox/imu
+        role: imu
+        required: true
+
+  zed2i:
+    display_name: StereoLabs ZED 2i
+    category: camera
+    nominal_rate_hz: 10
+    topics:
+      - name: /zed/zed_node/left/image_rect_color/compressed
+        role: left_image
+        required: true
+      - name: /zed/zed_node/right/image_rect_color/compressed
+        role: right_image
+        required: true
+      - name: /zed/zed_node/left/camera_info
+        role: left_camera_info
+        required: true
+      - name: /zed/zed_node/right/camera_info
+        role: right_camera_info
+        required: true
+      - name: /zed/zed_node/imu/data
+        role: imu
+        required: true
+
+  xsens:
+    display_name: Xsens MTi-680G
+    category: imu_gnss
+    nominal_rate_hz: 400
+    topics:
+      - name: /xsens/imu/data
+        role: imu
+        required: true
+      - name: /xsens/gnss
+        role: gnss
+        required: true
+
+  ublox:
+    display_name: 3x u-blox M8T EVK
+    category: gnss
+    nominal_rate_hz: 5
+    topics:
+      - name: /ublox_1/fix
+        role: fix
+        required: true
+      - name: /ublox_1/fix_velocity
+        role: velocity
+        required: true
+      - name: /ublox_2/fix
+        role: fix
+        required: true
+      - name: /ublox_2/fix_velocity
+        role: velocity
+        required: true
+      - name: /ublox_3/fix
+        role: fix
+        required: true
+      - name: /ublox_3/fix_velocity
+        role: velocity
+        required: true
+
+  rinex:
+    display_name: 3x JAVAD GNSS receivers
+    category: raw_gnss
+    nominal_rate_hz: 2
+    check_in_rosbag: false
+    topics: []
+
+  sonar:
+    display_name: Stern-mounted sonar
+    category: depth
+    nominal_rate_hz: 0.1
+    topics:
+      - name: /water_depth
+        role: depth
+        required: true
