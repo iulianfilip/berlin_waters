@@ -18,6 +18,12 @@ Berlin Waters is a multimodal dataset collected on inland waterways in Berlin to
 - **Post-processed reference trajectories** plus raw GNSS observations in **RINEX format**
 - **3,344** semantically annotated images across **seven classes**
 
+## Tools
+
+Public data-extraction and visualization tools are under development. See the
+[tools overview](tools/README.md) for the current command-line interfaces and
+planned workflows.
+
 ## Publication and Citation
 
 Citation information will be provided soon.
