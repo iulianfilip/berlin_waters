@@ -1,0 +1,5 @@
+# Dependencies for the optional Berlin Waters extraction and visualization tools.
+numpy
+PyYAML
+rosbags
+rerun-sdk>=0.38,<0.39
