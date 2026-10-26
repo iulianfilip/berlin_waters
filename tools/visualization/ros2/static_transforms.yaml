@@ -1,0 +1,30 @@
+schema_version: 1
+# Parent axes: +x forward, +y left, +z up. The imu_link origin is the Xsens
+# center and boat-frame origin in the supplied May 2025 extrinsics document.
+transforms:
+  - parent_frame: imu_link
+    child_frame: velodyne_VLP32
+    translation: [0.0, 0.0, 0.1908]
+    rotation_rpy: [0.0, 0.0, 0.0]
+  - parent_frame: imu_link
+    child_frame: livox_frame
+    translation: [0.1848, 0.0, 0.0056]
+    rotation_rpy: [0.0, 0.0, 0.0]
+  - parent_frame: imu_link
+    child_frame: os_sensor
+    translation: [0.0, 0.0, 0.3230]
+    rotation_rpy: [0.0, 0.0, 0.0]
+  - parent_frame: imu_link
+    child_frame: zed_imu_link
+    translation: [0.1670, 0.0, 0.1062]
+    rotation_rpy: [0.0, 0.0, 0.0]
+  - parent_frame: imu_link
+    child_frame: zed_left_camera_optical_frame
+    translation: [0.1670, 0.0600, 0.1062]
+    # ROS optical axes: +z forward, +x right, +y down.
+    rotation_rpy: [-1.5707963267948966, 0.0, -1.5707963267948966]
+  - parent_frame: imu_link
+    child_frame: zed_right_camera_optical_frame
+    translation: [0.1670, -0.0600, 0.1062]
+    # ROS optical axes: +z forward, +x right, +y down.
+    rotation_rpy: [-1.5707963267948966, 0.0, -1.5707963267948966]

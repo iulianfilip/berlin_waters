@@ -1,15 +1,13 @@
 # Berlin Waters tools
 
-The public tools are being introduced in small, reviewable milestones. They are
-split into two groups:
+Run these scripts from the repository root. The [main README](../README.md#tools)
+has the installation steps. For bag-based tools, pass a scene directory
+containing `metadata.yaml` and one or more `.db3` files.
 
-1. [Data extraction](extraction/README.md) for converting supported ROS 2 bag
-   messages into common files.
-2. [Visualization](visualization/README.md) for inspecting a bag with ROS 2 and
-   RViz, or inspecting extracted files without ROS 2 using Rerun.
-
-The extraction command can inspect a ROS 2 bag, select topics by sensor or exact
-name, copy compressed camera images without re-encoding, and export binary
-PCD/PLY point clouds plus IMU and GNSS CSV tables. The non-ROS Rerun viewer can
-either stream a ROS 2 bag directly with a bounded rolling memory window or load
-previously extracted images and point clouds on a shared timeline.
+| Workflow | Script or asset | Guide | Requirements |
+| --- | --- | --- | --- |
+| Extract images, point clouds, IMU, and GNSS | `tools/extraction/extract.py` | [Extraction](extraction/README.md) | Python environment from `requirements-tools.txt` |
+| View a bag directly | `tools/visualization/rerun/view_bag.py` | [Rerun](visualization/rerun/README.md) | Same Python environment; no ROS 2 |
+| View extracted files | `tools/visualization/rerun/view.py` | [Rerun](visualization/rerun/README.md) | Same Python environment; no ROS 2 |
+| View a bag in RViz | `tools/visualization/ros2/run_rviz.py` | [ROS 2/RViz](visualization/ros2/README.md) | ROS 2, RViz, and a sourced ROS environment |
+| View a bag in Foxglove | `tools/visualization/foxglove/run_bridge.py` and the supplied layout | [Foxglove](visualization/foxglove/README.md) | ROS 2, `foxglove_bridge`, and Foxglove Desktop |
