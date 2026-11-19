@@ -34,6 +34,31 @@ With no selectors, all supported topics are exported.
 
 ## Output
 
+For a seven-column IMU CSV and scene information, select one IMU topic:
+
+```bash
+.venv/bin/python tools/extraction/extract.py /path/to/berlin_06 \
+  --topic /xsens/imu/data --imu-format compact
+```
+
+This writes two files in `extracted/berlin_06/`:
+
+- `berlin_06_imu.csv`: the seven columns below.
+- `berlin_06_info.txt`: scene name, first and last bag timestamps in Unix
+  seconds (two decimal places), and CSV columns with units.
+
+```text
+timestamp_unix,acc_x,acc_y,acc_z,gyro_x,gyro_y,gyro_z
+```
+
+Time is the Unix bag timestamp in seconds; acceleration is in m/s² and angular
+velocity in rad/s.
+
+The bag timestamps cover all recorded topics. An explicit output path overrides
+the default scene directory. Use a directory reserved for these two files.
+
+Standard extraction uses the following layout:
+
 | Data | Files |
 | --- | --- |
 | Compressed camera images | `images/<topic>/` with original `.jpg` or `.png` files and `index.csv` |

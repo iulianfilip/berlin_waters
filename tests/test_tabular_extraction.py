@@ -18,6 +18,26 @@ def header() -> SimpleNamespace:
 
 
 class ImuCsvTests(unittest.TestCase):
+    def test_compact_imu_has_seven_columns_in_acc_gyro_order(self) -> None:
+        columns = tabular_csv_header("sensor_msgs/msg/Imu", "compact")
+        message = SimpleNamespace(
+            header=header(),
+            angular_velocity=vector(1.0, 2.0, 3.0),
+            linear_acceleration=vector(4.0, 5.0, 6.0),
+        )
+        row = tabular_csv_row(
+            "sensor_msgs/msg/Imu", message, 1_700_000_000_123_456_789, "compact"
+        )
+        self.assertEqual(
+            columns,
+            ("timestamp_unix", "acc_x", "acc_y", "acc_z",
+             "gyro_x", "gyro_y", "gyro_z"),
+        )
+        self.assertEqual(
+            row,
+            ("1700000000.123456789", 4.0, 5.0, 6.0, 1.0, 2.0, 3.0),
+        )
+
     def test_imu_schema_contains_required_fields_without_ns_columns(self) -> None:
         columns = tabular_csv_header("sensor_msgs/msg/Imu")
 
@@ -46,6 +66,20 @@ class ImuCsvTests(unittest.TestCase):
 
 
 class GnssCsvTests(unittest.TestCase):
+    def test_compact_imu_option_does_not_change_gnss(self) -> None:
+        message = SimpleNamespace(
+            header=header(), latitude=52.5, longitude=13.4, altitude=34.2,
+        )
+        message_type = "sensor_msgs/msg/NavSatFix"
+        self.assertEqual(
+            tabular_csv_header(message_type, "compact"),
+            tabular_csv_header(message_type),
+        )
+        self.assertEqual(
+            tabular_csv_row(message_type, message, 42, "compact"),
+            tabular_csv_row(message_type, message, 42),
+        )
+
     def test_gnss_schema_and_row(self) -> None:
         columns = tabular_csv_header("sensor_msgs/msg/NavSatFix")
         message = SimpleNamespace(

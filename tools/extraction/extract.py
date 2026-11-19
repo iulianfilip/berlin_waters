@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 from dataclasses import dataclass, field as dataclass_field
+from decimal import Decimal
 import io
 import json
 from pathlib import Path
@@ -394,10 +395,18 @@ def write_camera_index(entries: Sequence[CameraIndexEntry], index_path: Path) ->
         raise
 
 
-def tabular_csv_header(message_type: str) -> tuple[str, ...]:
+def tabular_csv_header(
+    message_type: str, imu_format: str = "full"
+) -> tuple[str, ...]:
     """Return the stable CSV columns for a supported tabular message."""
     common = ("timestamp_unix", "header_timestamp_unix", "frame_id")
     if message_type == "sensor_msgs/msg/Imu":
+        if imu_format == "compact":
+            return (
+                "timestamp_unix",
+                "acc_x", "acc_y", "acc_z",
+                "gyro_x", "gyro_y", "gyro_z",
+            )
         return common + (
             "orientation_x",
             "orientation_y",
@@ -416,7 +425,7 @@ def tabular_csv_header(message_type: str) -> tuple[str, ...]:
 
 
 def tabular_csv_row(
-    message_type: str, message: Any, timestamp_ns: int
+    message_type: str, message: Any, timestamp_ns: int, imu_format: str = "full"
 ) -> tuple[Any, ...]:
     """Convert one supported tabular ROS message into a CSV row."""
     header_timestamp_ns, frame_id = message_header_metadata(message)
@@ -431,9 +440,19 @@ def tabular_csv_row(
     )
 
     if message_type == "sensor_msgs/msg/Imu":
-        orientation = message.orientation
         angular_velocity = message.angular_velocity
         linear_acceleration = message.linear_acceleration
+        if imu_format == "compact":
+            return (
+                format_unix_timestamp_ns(timestamp_ns),
+                linear_acceleration.x,
+                linear_acceleration.y,
+                linear_acceleration.z,
+                angular_velocity.x,
+                angular_velocity.y,
+                angular_velocity.z,
+            )
+        orientation = message.orientation
         return common + (
             orientation.x,
             orientation.y,
@@ -798,7 +817,8 @@ def create_bag_reader(bag_path: Path) -> Any:
 
 
 def extract_tabular_topics(
-    inspection: BagInspection, output_directory: Path
+    inspection: BagInspection, output_directory: Path, imu_format: str = "full",
+    *, imu_csv_name: str | None = None,
 ) -> dict[str, TopicExtractionResult]:
     """Stream selected IMU and GNSS messages into per-topic CSV files."""
     table_plans = {
@@ -826,7 +846,11 @@ def extract_tabular_topics(
     }
 
     for topic, plan in table_plans.items():
-        relative_path = planned_output_path(plan)
+        relative_path = (
+            imu_csv_name
+            if imu_csv_name is not None and plan.message_type == "sensor_msgs/msg/Imu"
+            else planned_output_path(plan)
+        )
         assert relative_path is not None
         output_path = output_directory / relative_path
         temporary_path = output_path.parent / f".{output_path.name}.tmp"
@@ -838,7 +862,7 @@ def extract_tabular_topics(
                 quoting=csv.QUOTE_ALL,
                 lineterminator="\n",
             )
-            writer.writerow(tabular_csv_header(plan.message_type))
+            writer.writerow(tabular_csv_header(plan.message_type, imu_format))
             streams[topic] = stream
             writers[topic] = writer
             temporary_paths[topic] = temporary_path
@@ -862,7 +886,9 @@ def extract_tabular_topics(
                 try:
                     message = reader.deserialize(rawdata, connection.msgtype)
                     writers[topic].writerow(
-                        tabular_csv_row(connection.msgtype, message, timestamp_ns)
+                        tabular_csv_row(
+                            connection.msgtype, message, timestamp_ns, imu_format
+                        )
                     )
                     extracted_counts[topic] += 1
                     if start_timestamps[topic] is None:
@@ -940,6 +966,81 @@ def extract_tabular_topics(
             end_timestamp_ns=end_timestamps[topic],
         )
     return results
+
+
+def extract_compact_imu_scene(
+    inspection: BagInspection, output_directory: Path
+) -> int:
+    """Export one compact IMU CSV and a scene information file."""
+    selected = [plan for plan in inspection.topics if plan.selected]
+    if len(selected) != 1 or selected[0].message_type != "sensor_msgs/msg/Imu":
+        print(
+            "error: compact export requires exactly one IMU topic; "
+            "select it with --topic /xsens/imu/data",
+            file=sys.stderr,
+        )
+        return 2
+
+    scene = inspection.bag_path.name
+    csv_name = f"{scene}_imu.csv"
+    info_name = f"{scene}_info.txt"
+    try:
+        output_directory.mkdir(parents=True, exist_ok=True)
+        extra_files = [
+            path.name for path in output_directory.iterdir()
+            if path.name not in {csv_name, info_name}
+        ]
+        if extra_files:
+            print(
+                "error: compact output directory contains other files; "
+                "choose a separate scene directory",
+                file=sys.stderr,
+            )
+            return 2
+        results = extract_tabular_topics(
+            inspection, output_directory, "compact", imu_csv_name=csv_name
+        )
+        plan = selected[0]
+        result = results[plan.topic]
+        start = inspection.start_timestamp_ns
+        end = (
+            inspection.end_timestamp_ns_exclusive - 1
+            if inspection.end_timestamp_ns_exclusive is not None else None
+        )
+        def timestamp(value: int | None) -> str:
+            return (
+                f"{Decimal(value) / Decimal(1_000_000_000):.2f}"
+                if value is not None else "unavailable"
+            )
+        info = (
+            f"Scene: {scene}\n\n"
+            f"Bag start timestamp (Unix seconds): {timestamp(start)}\n"
+            f"Bag finish timestamp (Unix seconds): {timestamp(end)}\n"
+            "\nCSV columns and units:\n"
+            "1. timestamp_unix: Unix seconds\n"
+            "2. acc_x: linear_acceleration.x [m/s^2]\n"
+            "3. acc_y: linear_acceleration.y [m/s^2]\n"
+            "4. acc_z: linear_acceleration.z [m/s^2]\n"
+            "5. gyro_x: angular_velocity.x [rad/s]\n"
+            "6. gyro_y: angular_velocity.y [rad/s]\n"
+            "7. gyro_z: angular_velocity.z [rad/s]\n"
+        )
+        info_path = output_directory / info_name
+        temporary_path = output_directory / f".{info_name}.tmp"
+        try:
+            temporary_path.write_text(info, encoding="utf-8")
+            temporary_path.replace(info_path)
+        finally:
+            temporary_path.unlink(missing_ok=True)
+    except OSError as error:
+        print(f"error: could not write compact IMU export: {error}", file=sys.stderr)
+        return 1
+    print(f"[{result.status}] {plan.topic}: {result.extracted_message_count} rows")
+    if result.reason:
+        print(f"Extraction details: {result.reason}", file=sys.stderr)
+    print(f"CSV: {output_directory / csv_name}")
+    print(f"Info: {info_path}")
+    return 0 if result.status == "completed" else 1
 
 
 def extract_pointcloud_topics(
@@ -1486,7 +1587,10 @@ def build_parser() -> argparse.ArgumentParser:
         "output",
         nargs="?",
         type=Path,
-        help="extraction output directory (default: ./<bag-name>_extracted)",
+        help=(
+            "output directory (default: ./<bag-name>_extracted, or "
+            "./extracted/<bag-name> for compact IMU)"
+        ),
     )
     parser.add_argument(
         "--sensor",
@@ -1501,6 +1605,16 @@ def build_parser() -> argparse.ArgumentParser:
         default=[],
         metavar="TOPIC",
         help="select an exact topic; may be supplied more than once",
+    )
+    parser.add_argument(
+        "--imu-format",
+        choices=("full", "compact"),
+        default="full",
+        help=(
+            "IMU CSV layout: compact writes Unix bag time [s], acc_x/y/z "
+            "[m/s^2], gyro_x/y/z [rad/s] and scene info; select exactly one "
+            "IMU topic (default: %(default)s)"
+        ),
     )
     parser.add_argument(
         "--pointcloud-format",
@@ -1535,11 +1649,19 @@ def main(argv: Sequence[str] | None = None) -> int:
     output_directory = (
         args.output.expanduser().resolve()
         if args.output is not None
-        else Path.cwd() / f"{bag_path.name}_extracted"
+        else (
+            Path.cwd() / "extracted" / bag_path.name
+            if args.imu_format == "compact"
+            else Path.cwd() / f"{bag_path.name}_extracted"
+        )
     )
     print_inspection(inspection)
+    if args.imu_format == "compact":
+        return extract_compact_imu_scene(inspection, output_directory)
     extraction_results = extract_compressed_images(inspection, output_directory)
-    extraction_results.update(extract_tabular_topics(inspection, output_directory))
+    extraction_results.update(
+        extract_tabular_topics(inspection, output_directory, args.imu_format)
+    )
     extraction_results.update(
         extract_pointcloud_topics(
             inspection,
