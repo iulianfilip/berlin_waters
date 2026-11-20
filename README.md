@@ -498,7 +498,7 @@ We benchmark SLAM pipelines separately for each available LiDAR on training scen
 <!-- Explicit gray rule overlays keep horizontal separators visible in GitHub MathML. Thick rules span the full table; thin row separators start at the algorithm column. Widths match the current table contents. -->
 $$
 \begin{array}{llrrrrrr}
-{\color{#6e7781}\rlap{\rule[1em]{28.45em}{1.2pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{28.45em}{1.2pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \hspace{0.625em}\textsf{\textbf{00}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{01}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{02}}\hspace{0.625em} & \hspace{0.875em}\textsf{\textbf{03}}\hspace{0.875em} & \hspace{0.875em}\textsf{\textbf{04}}\hspace{0.875em} & \hspace{0.625em}\textsf{\textbf{05}}\hspace{0.625em} \\
+{\color{#6e7781}\rlap{\rule[1em]{28.45em}{2.4pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{28.45em}{2.4pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \hspace{0.625em}\textsf{\textbf{00}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{01}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{02}}\hspace{0.625em} & \hspace{0.875em}\textsf{\textbf{03}}\hspace{0.875em} & \hspace{0.875em}\textsf{\textbf{04}}\hspace{0.875em} & \hspace{0.625em}\textsf{\textbf{05}}\hspace{0.625em} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{FAST-LIO2} & \hspace{0.5em}\textsf{2.03} & \hspace{0.5em}\textsf{2.60} & \hspace{0.5em}\textsf{2.73} & \hspace{0.5em}\textsf{34.16} & \hspace{0.5em}\textsf{12.00} & \hspace{0.5em}\textsf{4.37} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{iG-LIO} & \hspace{0.5em}{\color{#218bff}\textsf{0.94}} & \hspace{0.5em}\textsf{2.56} & \hspace{0.5em}\textsf{2.78} & \hspace{1em}{\color{#218bff}\textsf{5.74}} & \hspace{0.5em}\textsf{10.87} & \hspace{0.5em}\textsf{1.61} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{PV-LIO} & \hspace{0.5em}\textsf{1.77} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{1.31}}} & \hspace{0.5em}{\color{#218bff}\textsf{2.21}} & \hspace{1em}\textsf{7.47} & \hspace{1em}{\color{#2da44e}\textsf{\textbf{3.84}}} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{0.92}}} \\
@@ -512,7 +512,7 @@ $$
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{GenZ-ICP} & \textsf{43.92} & \textsf{53.51} & \textsf{70.57} & \textsf{206.61} & \textsf{108.71} & \textsf{52.24} \\
 \textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{FLOAM} & \textsf{12.29} & \textsf{16.88} & \hspace{0.5em}\textsf{5.73} & \hspace{0.5em}\textsf{46.51} & \hspace{0.5em}\textsf{19.13} & \hspace{0.5em}\textsf{8.35} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{CT-ICP} & \hspace{0.5em}\textsf{9.68} & \hspace{1.25em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{1.75em}\textsf{—} & \hspace{1.75em}\textsf{—} & \hspace{1.25em}\textsf{—} \\
-{\color{#6e7781}\rlap{\rule[-0.35em]{28.45em}{1.2pt}}} & \textsf{I2EKF-LO} & \hspace{0.5em}\textsf{9.66} & \textsf{11.62} & \textsf{29.54} & \hspace{0.5em}\textsf{67.02} & \hspace{0.5em}\textsf{29.53} & \textsf{22.67} \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{28.45em}{2.4pt}}} & \textsf{I2EKF-LO} & \hspace{0.5em}\textsf{9.66} & \textsf{11.62} & \textsf{29.54} & \hspace{0.5em}\textsf{67.02} & \hspace{0.5em}\textsf{29.53} & \textsf{22.67} \\
 \end{array}
 $$
 
@@ -522,7 +522,7 @@ $$
 
 $$
 \begin{array}{llrrrrrr}
-{\color{#6e7781}\rlap{\rule[1em]{19.95em}{1.2pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{19.95em}{1.2pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \textsf{\textbf{00}} & \textsf{\textbf{01}} & \textsf{\textbf{02}} & \textsf{\textbf{03}} & \textsf{\textbf{04}} & \textsf{\textbf{05}}   \\
+{\color{#6e7781}\rlap{\rule[1em]{19.95em}{2.4pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{19.95em}{2.4pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \textsf{\textbf{00}} & \textsf{\textbf{01}} & \textsf{\textbf{02}} & \textsf{\textbf{03}} & \textsf{\textbf{04}} & \textsf{\textbf{05}}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{FAST-LIO2} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{iG-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{PV-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
@@ -536,7 +536,7 @@ $$
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{GenZ-ICP} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
 \textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{FLOAM} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{CT-ICP} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
-{\color{#6e7781}\rlap{\rule[-0.35em]{19.95em}{1.2pt}}} & \textsf{I2EKF-LO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{19.95em}{2.4pt}}} & \textsf{I2EKF-LO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
 \end{array}
 $$
 
@@ -548,7 +548,7 @@ $$
 
 $$
 \begin{array}{llrrr}
-{\color{#6e7781}\rlap{\rule[1em]{14.55em}{1.2pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{14.55em}{1.2pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \textsf{\textbf{03}} & \textsf{\textbf{04}} & \textsf{\textbf{05}}   \\
+{\color{#6e7781}\rlap{\rule[1em]{14.55em}{2.4pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{14.55em}{2.4pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \textsf{\textbf{03}} & \textsf{\textbf{04}} & \textsf{\textbf{05}}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{FAST-LIO2} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{iG-LIO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{PV-LIO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
@@ -562,7 +562,7 @@ $$
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{GenZ-ICP} & \textsf{—} & \textsf{—} & \textsf{—}   \\
 \textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{FLOAM} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{CT-ICP} & \textsf{—} & \textsf{—} & \textsf{—}   \\
-{\color{#6e7781}\rlap{\rule[-0.35em]{14.55em}{1.2pt}}} & \textsf{I2EKF-LO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{14.55em}{2.4pt}}} & \textsf{I2EKF-LO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
 \end{array}
 $$
 
