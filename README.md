@@ -492,102 +492,83 @@ We benchmark SLAM pipelines separately for each available LiDAR on training scen
 
 #### ATE position [m], $\color{#2da44e}{\small \textsf{Best}}$ $\color{#218bff}{\small \textsf{Second best}}$
 
-<!-- Blank lines enable math in HTML cells. Trailing spans cancel VS Code paragraph spacing; GitHub resets this spacing itself. -->
-<table border="4" frame="hsides" rules="rows" style="border-collapse: collapse;">
-  <thead>
-    <tr><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">Group</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">Algorithm</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">00</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">01</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">02</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">03</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">04</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">05</th></tr>
-  </thead>
-  <tbody>
-    <tr><th rowspan="9" scope="rowgroup" align="center" valign="middle" style="border-bottom: 4px solid #6e7781;"><img src="figures/lio_vertical.svg" alt="LIO"></th><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/hku-mars/FAST_LIO">FAST-LIO2</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">2.03</td><td align="right" style="border-bottom: 1px solid #6e7781;">2.60</td><td align="right" style="border-bottom: 1px solid #6e7781;">2.73</td><td align="right" style="border-bottom: 1px solid #6e7781;">34.16</td><td align="right" style="border-bottom: 1px solid #6e7781;">12.00</td><td align="right" style="border-bottom: 1px solid #6e7781;">4.37</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/zijiechenrobotics/ig_lio">iG-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">
-
-$\color{#218bff}{\small \textsf{0.94}}$<span style="display: block; margin-bottom: -16px;"></span>
-
-</td><td align="right" style="border-bottom: 1px solid #6e7781;">2.56</td><td align="right" style="border-bottom: 1px solid #6e7781;">2.78</td><td align="right" style="border-bottom: 1px solid #6e7781;">
-
-$\color{#218bff}{\small \textsf{5.74}}$<span style="display: block; margin-bottom: -16px;"></span>
-
-</td><td align="right" style="border-bottom: 1px solid #6e7781;">10.87</td><td align="right" style="border-bottom: 1px solid #6e7781;">1.61</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/HViktorTsoi/PV-LIO">PV-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">1.77</td><td align="right" style="border-bottom: 1px solid #6e7781;">
-
-$\color{#2da44e}{\small \textsf{\textbf{1.31}}}$<span style="display: block; margin-bottom: -16px;"></span>
-
-</td><td align="right" style="border-bottom: 1px solid #6e7781;">
-
-$\color{#218bff}{\small \textsf{2.21}}$<span style="display: block; margin-bottom: -16px;"></span>
-
-</td><td align="right" style="border-bottom: 1px solid #6e7781;">7.47</td><td align="right" style="border-bottom: 1px solid #6e7781;">
-
-$\color{#2da44e}{\small \textsf{\textbf{3.84}}}$<span style="display: block; margin-bottom: -16px;"></span>
-
-</td><td align="right" style="border-bottom: 1px solid #6e7781;">
-
-$\color{#2da44e}{\small \textsf{\textbf{0.92}}}$<span style="display: block; margin-bottom: -16px;"></span>
-
-</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/TixiaoShan/LIO-SAM">LIO-SAM</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">1.08</td><td align="right" style="border-bottom: 1px solid #6e7781;">3.26</td><td align="right" style="border-bottom: 1px solid #6e7781;">
-
-$\color{#2da44e}{\small \textsf{\textbf{1.91}}}$<span style="display: block; margin-bottom: -16px;"></span>
-
-</td><td align="right" style="border-bottom: 1px solid #6e7781;">
-
-$\color{#2da44e}{\small \textsf{\textbf{4.70}}}$<span style="display: block; margin-bottom: -16px;"></span>
-
-</td><td align="right" style="border-bottom: 1px solid #6e7781;">5.44</td><td align="right" style="border-bottom: 1px solid #6e7781;">4.90</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/YJZLuckyBoy/liorf">Liorf</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">1.06</td><td align="right" style="border-bottom: 1px solid #6e7781;">3.06</td><td align="right" style="border-bottom: 1px solid #6e7781;">2.36</td><td align="right" style="border-bottom: 1px solid #6e7781;">15.33</td><td align="right" style="border-bottom: 1px solid #6e7781;">5.43</td><td align="right" style="border-bottom: 1px solid #6e7781;">7.18</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/url-kaist/se3-lio">SE(3)-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">2.12</td><td align="right" style="border-bottom: 1px solid #6e7781;">
-
-$\color{#218bff}{\small \textsf{2.40}}$<span style="display: block; margin-bottom: -16px;"></span>
-
-</td><td align="right" style="border-bottom: 1px solid #6e7781;">3.47</td><td align="right" style="border-bottom: 1px solid #6e7781;">11.68</td><td align="right" style="border-bottom: 1px solid #6e7781;">6.88</td><td align="right" style="border-bottom: 1px solid #6e7781;">
-
-$\color{#218bff}{\small \textsf{1.16}}$<span style="display: block; margin-bottom: -16px;"></span>
-
-</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/ethz-asl/BIEVR-LIO">BIEVR-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">
-
-$\color{#2da44e}{\small \textsf{\textbf{0.88}}}$<span style="display: block; margin-bottom: -16px;"></span>
-
-</td><td align="right" style="border-bottom: 1px solid #6e7781;">12.59</td><td align="right" style="border-bottom: 1px solid #6e7781;">4.07</td><td align="right" style="border-bottom: 1px solid #6e7781;">11.87</td><td align="right" style="border-bottom: 1px solid #6e7781;">
-
-$\color{#218bff}{\small \textsf{4.24}}$<span style="display: block; margin-bottom: -16px;"></span>
-
-</td><td align="right" style="border-bottom: 1px solid #6e7781;">2.31</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/cocel-postech/genz-lio">GenZ-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">8.62</td><td align="right" style="border-bottom: 1px solid #6e7781;">19.86</td><td align="right" style="border-bottom: 1px solid #6e7781;">20.71</td><td align="right" style="border-bottom: 1px solid #6e7781;">29.24</td><td align="right" style="border-bottom: 1px solid #6e7781;">30.10</td><td align="right" style="border-bottom: 1px solid #6e7781;">3.49</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 4px solid #6e7781;"><a href="https://github.com/PRBonn/rko_lio">RKO-LIO</a></th><td align="right" style="border-bottom: 4px solid #6e7781;">15.95</td><td align="right" style="border-bottom: 4px solid #6e7781;">53.36</td><td align="right" style="border-bottom: 4px solid #6e7781;">27.90</td><td align="right" style="border-bottom: 4px solid #6e7781;">77.19</td><td align="right" style="border-bottom: 4px solid #6e7781;">32.89</td><td align="right" style="border-bottom: 4px solid #6e7781;">54.74</td></tr>
-    <tr><th rowspan="5" scope="rowgroup" align="center" valign="middle" style="border-bottom: 4px solid #6e7781;"><img src="figures/lo_vertical.svg" alt="LO"></th><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/PRBonn/kiss-icp">KISS-ICP</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">19.75</td><td align="right" style="border-bottom: 1px solid #6e7781;">54.01</td><td align="right" style="border-bottom: 1px solid #6e7781;">31.35</td><td align="right" style="border-bottom: 1px solid #6e7781;">107.43</td><td align="right" style="border-bottom: 1px solid #6e7781;">37.12</td><td align="right" style="border-bottom: 1px solid #6e7781;">23.45</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/cocel-postech/genz-icp">GenZ-ICP</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">43.92</td><td align="right" style="border-bottom: 1px solid #6e7781;">53.51</td><td align="right" style="border-bottom: 1px solid #6e7781;">70.57</td><td align="right" style="border-bottom: 1px solid #6e7781;">206.61</td><td align="right" style="border-bottom: 1px solid #6e7781;">108.71</td><td align="right" style="border-bottom: 1px solid #6e7781;">52.24</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/wh200720041/floam">FLOAM</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">12.29</td><td align="right" style="border-bottom: 1px solid #6e7781;">16.88</td><td align="right" style="border-bottom: 1px solid #6e7781;">5.73</td><td align="right" style="border-bottom: 1px solid #6e7781;">46.51</td><td align="right" style="border-bottom: 1px solid #6e7781;">19.13</td><td align="right" style="border-bottom: 1px solid #6e7781;">8.35</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/jedeschaud/ct_icp">CT-ICP</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">9.68</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 4px solid #6e7781;"><a href="https://github.com/YWL0720/I2EKF-LO">I2EKF-LO</a></th><td align="right" style="border-bottom: 4px solid #6e7781;">9.66</td><td align="right" style="border-bottom: 4px solid #6e7781;">11.62</td><td align="right" style="border-bottom: 4px solid #6e7781;">29.54</td><td align="right" style="border-bottom: 4px solid #6e7781;">67.02</td><td align="right" style="border-bottom: 4px solid #6e7781;">29.53</td><td align="right" style="border-bottom: 4px solid #6e7781;">22.67</td></tr>
-  </tbody>
-</table>
+$$
+\small
+\begin{array}{clrrrrrr}
+\hline\hline
+\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \textsf{\textbf{00}} & \textsf{\textbf{01}} & \textsf{\textbf{02}} & \textsf{\textbf{03}} & \textsf{\textbf{04}} & \textsf{\textbf{05}} \\
+\hline\hline
+ & \textsf{FAST-LIO2} & \textsf{2.03} & \textsf{2.60} & \textsf{2.73} & \textsf{34.16} & \textsf{12.00} & \textsf{4.37} \\
+\hline
+ & \textsf{iG-LIO} & {\color{#218bff}\textsf{0.94}} & \textsf{2.56} & \textsf{2.78} & {\color{#218bff}\textsf{5.74}} & \textsf{10.87} & \textsf{1.61} \\
+\hline
+ & \textsf{PV-LIO} & \textsf{1.77} & {\color{#2da44e}\textsf{\textbf{1.31}}} & {\color{#218bff}\textsf{2.21}} & \textsf{7.47} & {\color{#2da44e}\textsf{\textbf{3.84}}} & {\color{#2da44e}\textsf{\textbf{0.92}}} \\
+\hline
+ & \textsf{LIO-SAM} & \textsf{1.08} & \textsf{3.26} & {\color{#2da44e}\textsf{\textbf{1.91}}} & {\color{#2da44e}\textsf{\textbf{4.70}}} & \textsf{5.44} & \textsf{4.90} \\
+\hline
+\textsf{\textbf{LIO}} & \textsf{Liorf} & \textsf{1.06} & \textsf{3.06} & \textsf{2.36} & \textsf{15.33} & \textsf{5.43} & \textsf{7.18} \\
+\hline
+ & \textsf{SE(3)-LIO} & \textsf{2.12} & {\color{#218bff}\textsf{2.40}} & \textsf{3.47} & \textsf{11.68} & \textsf{6.88} & {\color{#218bff}\textsf{1.16}} \\
+\hline
+ & \textsf{BIEVR-LIO} & {\color{#2da44e}\textsf{\textbf{0.88}}} & \textsf{12.59} & \textsf{4.07} & \textsf{11.87} & {\color{#218bff}\textsf{4.24}} & \textsf{2.31} \\
+\hline
+ & \textsf{GenZ-LIO} & \textsf{8.62} & \textsf{19.86} & \textsf{20.71} & \textsf{29.24} & \textsf{30.10} & \textsf{3.49} \\
+\hline
+ & \textsf{RKO-LIO} & \textsf{15.95} & \textsf{53.36} & \textsf{27.90} & \textsf{77.19} & \textsf{32.89} & \textsf{54.74} \\
+\hline\hline
+ & \textsf{KISS-ICP} & \textsf{19.75} & \textsf{54.01} & \textsf{31.35} & \textsf{107.43} & \textsf{37.12} & \textsf{23.45} \\
+\hline
+ & \textsf{GenZ-ICP} & \textsf{43.92} & \textsf{53.51} & \textsf{70.57} & \textsf{206.61} & \textsf{108.71} & \textsf{52.24} \\
+\hline
+\textsf{\textbf{LO}} & \textsf{FLOAM} & \textsf{12.29} & \textsf{16.88} & \textsf{5.73} & \textsf{46.51} & \textsf{19.13} & \textsf{8.35} \\
+\hline
+ & \textsf{CT-ICP} & \textsf{9.68} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{I2EKF-LO} & \textsf{9.66} & \textsf{11.62} & \textsf{29.54} & \textsf{67.02} & \textsf{29.53} & \textsf{22.67} \\
+\hline\hline
+\end{array}
+$$
 
 ### Livox LiDAR
 
 #### ATE position [m]
 
-<table border="4" frame="hsides" rules="rows" style="border-collapse: collapse;">
-  <thead>
-    <tr><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">Group</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">Algorithm</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">00</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">01</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">02</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">03</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">04</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">05</th></tr>
-  </thead>
-  <tbody>
-    <tr><th rowspan="9" scope="rowgroup" align="center" valign="middle" style="border-bottom: 4px solid #6e7781;"><img src="figures/lio_vertical.svg" alt="LIO"></th><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/hku-mars/FAST_LIO">FAST-LIO2</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/zijiechenrobotics/ig_lio">iG-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/HViktorTsoi/PV-LIO">PV-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/TixiaoShan/LIO-SAM">LIO-SAM</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/YJZLuckyBoy/liorf">Liorf</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/url-kaist/se3-lio">SE(3)-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/ethz-asl/BIEVR-LIO">BIEVR-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/cocel-postech/genz-lio">GenZ-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 4px solid #6e7781;"><a href="https://github.com/PRBonn/rko_lio">RKO-LIO</a></th><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td></tr>
-    <tr><th rowspan="5" scope="rowgroup" align="center" valign="middle" style="border-bottom: 4px solid #6e7781;"><img src="figures/lo_vertical.svg" alt="LO"></th><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/PRBonn/kiss-icp">KISS-ICP</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/cocel-postech/genz-icp">GenZ-ICP</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/wh200720041/floam">FLOAM</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/jedeschaud/ct_icp">CT-ICP</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 4px solid #6e7781;"><a href="https://github.com/YWL0720/I2EKF-LO">I2EKF-LO</a></th><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td></tr>
-  </tbody>
-</table>
+$$
+\small
+\begin{array}{clrrrrrr}
+\hline\hline
+\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \textsf{\textbf{00}} & \textsf{\textbf{01}} & \textsf{\textbf{02}} & \textsf{\textbf{03}} & \textsf{\textbf{04}} & \textsf{\textbf{05}} \\
+\hline\hline
+ & \textsf{FAST-LIO2} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{iG-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{PV-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{LIO-SAM} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+\textsf{\textbf{LIO}} & \textsf{Liorf} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{SE(3)-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{BIEVR-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{GenZ-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{RKO-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline\hline
+ & \textsf{KISS-ICP} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{GenZ-ICP} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+\textsf{\textbf{LO}} & \textsf{FLOAM} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{CT-ICP} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{I2EKF-LO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline\hline
+\end{array}
+$$
 
 ### Ouster LiDAR
 
@@ -595,27 +576,47 @@ $\color{#218bff}{\small \textsf{4.24}}$<span style="display: block; margin-botto
 
 #### ATE position [m]
 
-<table border="4" frame="hsides" rules="rows" style="border-collapse: collapse;">
-  <thead>
-    <tr><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">Group</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">Algorithm</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">03</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">04</th><th scope="col" align="center" style="border-top: 4px solid #6e7781; border-bottom: 4px solid #6e7781;">05</th></tr>
-  </thead>
-  <tbody>
-    <tr><th rowspan="9" scope="rowgroup" align="center" valign="middle" style="border-bottom: 4px solid #6e7781;"><img src="figures/lio_vertical.svg" alt="LIO"></th><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/hku-mars/FAST_LIO">FAST-LIO2</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/zijiechenrobotics/ig_lio">iG-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/HViktorTsoi/PV-LIO">PV-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/TixiaoShan/LIO-SAM">LIO-SAM</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/YJZLuckyBoy/liorf">Liorf</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/url-kaist/se3-lio">SE(3)-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/ethz-asl/BIEVR-LIO">BIEVR-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/cocel-postech/genz-lio">GenZ-LIO</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 4px solid #6e7781;"><a href="https://github.com/PRBonn/rko_lio">RKO-LIO</a></th><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td></tr>
-    <tr><th rowspan="5" scope="rowgroup" align="center" valign="middle" style="border-bottom: 4px solid #6e7781;"><img src="figures/lo_vertical.svg" alt="LO"></th><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/PRBonn/kiss-icp">KISS-ICP</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/cocel-postech/genz-icp">GenZ-ICP</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/wh200720041/floam">FLOAM</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 1px solid #6e7781;"><a href="https://github.com/jedeschaud/ct_icp">CT-ICP</a></th><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td><td align="right" style="border-bottom: 1px solid #6e7781;">—</td></tr>
-    <tr><th scope="row" align="left" style="border-bottom: 4px solid #6e7781;"><a href="https://github.com/YWL0720/I2EKF-LO">I2EKF-LO</a></th><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td><td align="right" style="border-bottom: 4px solid #6e7781;">—</td></tr>
-  </tbody>
-</table>
+$$
+\small
+\begin{array}{clrrr}
+\hline\hline
+\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \textsf{\textbf{03}} & \textsf{\textbf{04}} & \textsf{\textbf{05}} \\
+\hline\hline
+ & \textsf{FAST-LIO2} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{iG-LIO} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{PV-LIO} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{LIO-SAM} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+\textsf{\textbf{LIO}} & \textsf{Liorf} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{SE(3)-LIO} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{BIEVR-LIO} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{GenZ-LIO} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{RKO-LIO} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline\hline
+ & \textsf{KISS-ICP} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{GenZ-ICP} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+\textsf{\textbf{LO}} & \textsf{FLOAM} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{CT-ICP} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline
+ & \textsf{I2EKF-LO} & \textsf{—} & \textsf{—} & \textsf{—} \\
+\hline\hline
+\end{array}
+$$
+
+**Algorithm repositories:**
+
+- **LIO:** [FAST-LIO2](https://github.com/hku-mars/FAST_LIO) · [iG-LIO](https://github.com/zijiechenrobotics/ig_lio) · [PV-LIO](https://github.com/HViktorTsoi/PV-LIO) · [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM) · [Liorf](https://github.com/YJZLuckyBoy/liorf) · [SE(3)-LIO](https://github.com/url-kaist/se3-lio) · [BIEVR-LIO](https://github.com/ethz-asl/BIEVR-LIO) · [GenZ-LIO](https://github.com/cocel-postech/genz-lio) · [RKO-LIO](https://github.com/PRBonn/rko_lio)
+- **LO:** [KISS-ICP](https://github.com/PRBonn/kiss-icp) · [GenZ-ICP](https://github.com/cocel-postech/genz-icp) · [FLOAM](https://github.com/wh200720041/floam) · [CT-ICP](https://github.com/jedeschaud/ct_icp) · [I2EKF-LO](https://github.com/YWL0720/I2EKF-LO)
 
 ---
 
