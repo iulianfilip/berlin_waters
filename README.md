@@ -489,7 +489,7 @@ The following scenes cover overlapping environments at different times, supporti
 We benchmark SLAM pipelines separately for each available LiDAR on training scenes 00–05 using Absolute Trajectory Error (ATE).
 
 - **LIO:** [FAST-LIO2](https://github.com/hku-mars/FAST_LIO) · [iG-LIO](https://github.com/zijiechenrobotics/ig_lio) · [PV-LIO](https://github.com/HViktorTsoi/PV-LIO) · [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM) · [Liorf](https://github.com/YJZLuckyBoy/liorf) · [SE(3)-LIO](https://github.com/url-kaist/se3-lio) · [BIEVR-LIO](https://github.com/ethz-asl/BIEVR-LIO) · [GenZ-LIO](https://github.com/cocel-postech/genz-lio) · [RKO-LIO](https://github.com/PRBonn/rko_lio)
-- **LO:** [KISS-ICP](https://github.com/PRBonn/kiss-icp) · [GenZ-ICP](https://github.com/cocel-postech/genz-icp) · [FLOAM](https://github.com/wh200720041/floam) · [CT-ICP](https://github.com/jedeschaud/ct_icp) · [I2EKF-LO](https://github.com/YWL0720/I2EKF-LO)
+- **LO:** [KISS-ICP](https://github.com/PRBonn/kiss-icp) · [GenZ-ICP](https://github.com/cocel-postech/genz-icp) · [FLOAM](https://github.com/wh200720041/floam) · [I2EKF-LO](https://github.com/YWL0720/I2EKF-LO)
 
 ### Velodyne LiDAR
 
@@ -511,32 +511,30 @@ $$
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{KISS-ICP} & \textsf{19.75} & \textsf{54.01} & \textsf{31.35} & \textsf{107.43} & \hspace{0.5em}\textsf{37.12} & \textsf{23.45} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{GenZ-ICP} & \textsf{43.92} & \textsf{53.51} & \textsf{70.57} & \textsf{206.61} & \textsf{108.71} & \textsf{52.24} \\
 \textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{FLOAM} & \textsf{12.29} & \textsf{16.88} & \hspace{0.5em}\textsf{5.73} & \hspace{0.5em}\textsf{46.51} & \hspace{0.5em}\textsf{19.13} & \hspace{0.5em}\textsf{8.35} \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{CT-ICP} & \hspace{0.5em}\textsf{9.68} & \hspace{1.25em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{1.75em}\textsf{—} & \hspace{1.75em}\textsf{—} & \hspace{1.25em}\textsf{—} \\
 {\color{#6e7781}\rlap{\rule[-0.35em]{28.45em}{2.4pt}}} & \textsf{I2EKF-LO} & \hspace{0.5em}\textsf{9.66} & \textsf{11.62} & \textsf{29.54} & \hspace{0.5em}\textsf{67.02} & \hspace{0.5em}\textsf{29.53} & \textsf{22.67} \\
 \end{array}
 $$
 
 ### Livox LiDAR
 
-#### ATE position [m]
+#### ATE position [m], $\color{#2da44e}{\textsf{Best}}$ $\color{#218bff}{\textsf{Second best}}$
 
 $$
 \begin{array}{llrrrrrr}
-{\color{#6e7781}\rlap{\rule[1em]{19.95em}{2.4pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{19.95em}{2.4pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \textsf{\textbf{00}} & \textsf{\textbf{01}} & \textsf{\textbf{02}} & \textsf{\textbf{03}} & \textsf{\textbf{04}} & \textsf{\textbf{05}}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{FAST-LIO2} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{iG-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{PV-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{LIO-SAM} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
-\textsf{\textbf{LIO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{Liorf} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{SE(3)-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{BIEVR-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{GenZ-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
-{\color{#6e7781}\rlap{\rule[-0.35em]{19.95em}{2.4pt}}} & \textsf{RKO-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{KISS-ICP} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{GenZ-ICP} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
-\textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{FLOAM} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{CT-ICP} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
-{\color{#6e7781}\rlap{\rule[-0.35em]{19.95em}{2.4pt}}} & \textsf{I2EKF-LO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
+{\color{#6e7781}\rlap{\rule[1em]{25.45em}{2.4pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{25.45em}{2.4pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \hspace{0.625em}\textsf{\textbf{00}}\hspace{0.625em} & \hspace{0.375em}\textsf{\textbf{01}}\hspace{0.375em} & \hspace{0.375em}\textsf{\textbf{02}}\hspace{0.375em} & \hspace{0.625em}\textsf{\textbf{03}}\hspace{0.625em} & \hspace{0.375em}\textsf{\textbf{04}}\hspace{0.375em} & \hspace{0.375em}\textsf{\textbf{05}}\hspace{0.375em} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{22.10em}{0.4pt}}}\textsf{FAST-LIO2} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{22.10em}{0.4pt}}}\textsf{iG-LIO} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{22.10em}{0.4pt}}}\textsf{PV-LIO} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{22.10em}{0.4pt}}}\textsf{LIO-SAM} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} \\
+\textsf{\textbf{LIO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{22.10em}{0.4pt}}}\textsf{Liorf} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{22.10em}{0.4pt}}}\textsf{SE(3)-LIO} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{22.10em}{0.4pt}}}\textsf{BIEVR-LIO} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{22.10em}{0.4pt}}}\textsf{GenZ-LIO} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{25.45em}{2.4pt}}} & \textsf{RKO-LIO} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{22.10em}{0.4pt}}}\textsf{KISS-ICP} & {\color{#218bff}\textsf{20.94}} & {\color{#2da44e}\textsf{\textbf{0.90}}} & {\color{#218bff}\textsf{3.54}} & {\color{#218bff}\textsf{26.25}} & {\color{#2da44e}\textsf{\textbf{7.07}}} & {\color{#218bff}\textsf{0.72}} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{22.10em}{0.4pt}}}\textsf{GenZ-ICP} & \textsf{21.46} & {\color{#218bff}\textsf{1.48}} & {\color{#2da44e}\textsf{\textbf{2.32}}} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{6.64}}} & {\color{#218bff}\textsf{9.59}} & {\color{#2da44e}\textsf{\textbf{0.69}}} \\
+\textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{22.10em}{0.4pt}}}\textsf{FLOAM} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{25.45em}{2.4pt}}} & \textsf{I2EKF-LO} & {\color{#2da44e}\textsf{\textbf{20.80}}} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{0.75em}\textsf{—} & \hspace{0.75em}\textsf{—} \\
 \end{array}
 $$
 
@@ -561,7 +559,6 @@ $$
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{KISS-ICP} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{GenZ-ICP} & \textsf{—} & \textsf{—} & \textsf{—}   \\
 \textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{FLOAM} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{CT-ICP} & \textsf{—} & \textsf{—} & \textsf{—}   \\
 {\color{#6e7781}\rlap{\rule[-0.35em]{14.55em}{2.4pt}}} & \textsf{I2EKF-LO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
 \end{array}
 $$
