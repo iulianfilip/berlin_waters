@@ -488,14 +488,17 @@ The following scenes cover overlapping environments at different times, supporti
 
 We benchmark SLAM pipelines separately for each available LiDAR on training scenes 00–05 using Absolute Trajectory Error (ATE).
 
+- **LIO:** [FAST-LIO2](https://github.com/hku-mars/FAST_LIO) · [iG-LIO](https://github.com/zijiechenrobotics/ig_lio) · [PV-LIO](https://github.com/HViktorTsoi/PV-LIO) · [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM) · [Liorf](https://github.com/YJZLuckyBoy/liorf) · [SE(3)-LIO](https://github.com/url-kaist/se3-lio) · [BIEVR-LIO](https://github.com/ethz-asl/BIEVR-LIO) · [GenZ-LIO](https://github.com/cocel-postech/genz-lio) · [RKO-LIO](https://github.com/PRBonn/rko_lio)
+- **LO:** [KISS-ICP](https://github.com/PRBonn/kiss-icp) · [GenZ-ICP](https://github.com/cocel-postech/genz-icp) · [FLOAM](https://github.com/wh200720041/floam) · [CT-ICP](https://github.com/jedeschaud/ct_icp) · [I2EKF-LO](https://github.com/YWL0720/I2EKF-LO)
+
 ### Velodyne LiDAR
 
 #### ATE position [m], $\color{#2da44e}{\textsf{Best}}$ $\color{#218bff}{\textsf{Second best}}$
 
-<!-- Explicit gray rule overlays keep horizontal separators visible in GitHub MathML. Rules start at the algorithm column; widths match the current table contents. -->
+<!-- Explicit gray rule overlays keep horizontal separators visible in GitHub MathML. Thick rules span the full table; thin row separators start at the algorithm column. Widths match the current table contents. -->
 $$
 \begin{array}{llrrrrrr}
-\textsf{\textbf{Group}} & {\color{#6e7781}\rlap{\rule[1em]{25.10em}{1.2pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{1.2pt}}}\textsf{\textbf{Algorithm}} & \hspace{0.625em}\textsf{\textbf{00}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{01}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{02}}\hspace{0.625em} & \hspace{0.875em}\textsf{\textbf{03}}\hspace{0.875em} & \hspace{0.875em}\textsf{\textbf{04}}\hspace{0.875em} & \hspace{0.625em}\textsf{\textbf{05}}\hspace{0.625em} \\
+{\color{#6e7781}\rlap{\rule[1em]{28.45em}{1.2pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{28.45em}{1.2pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \hspace{0.625em}\textsf{\textbf{00}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{01}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{02}}\hspace{0.625em} & \hspace{0.875em}\textsf{\textbf{03}}\hspace{0.875em} & \hspace{0.875em}\textsf{\textbf{04}}\hspace{0.875em} & \hspace{0.625em}\textsf{\textbf{05}}\hspace{0.625em} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{FAST-LIO2} & \hspace{0.5em}\textsf{2.03} & \hspace{0.5em}\textsf{2.60} & \hspace{0.5em}\textsf{2.73} & \hspace{0.5em}\textsf{34.16} & \hspace{0.5em}\textsf{12.00} & \hspace{0.5em}\textsf{4.37} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{iG-LIO} & \hspace{0.5em}{\color{#218bff}\textsf{0.94}} & \hspace{0.5em}\textsf{2.56} & \hspace{0.5em}\textsf{2.78} & \hspace{1em}{\color{#218bff}\textsf{5.74}} & \hspace{0.5em}\textsf{10.87} & \hspace{0.5em}\textsf{1.61} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{PV-LIO} & \hspace{0.5em}\textsf{1.77} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{1.31}}} & \hspace{0.5em}{\color{#218bff}\textsf{2.21}} & \hspace{1em}\textsf{7.47} & \hspace{1em}{\color{#2da44e}\textsf{\textbf{3.84}}} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{0.92}}} \\
@@ -504,16 +507,14 @@ $$
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{SE(3)-LIO} & \hspace{0.5em}\textsf{2.12} & \hspace{0.5em}{\color{#218bff}\textsf{2.40}} & \hspace{0.5em}\textsf{3.47} & \hspace{0.5em}\textsf{11.68} & \hspace{1em}\textsf{6.88} & \hspace{0.5em}{\color{#218bff}\textsf{1.16}} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{BIEVR-LIO} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{0.88}}} & \textsf{12.59} & \hspace{0.5em}\textsf{4.07} & \hspace{0.5em}\textsf{11.87} & \hspace{1em}{\color{#218bff}\textsf{4.24}} & \hspace{0.5em}\textsf{2.31} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{GenZ-LIO} & \hspace{0.5em}\textsf{8.62} & \textsf{19.86} & \textsf{20.71} & \hspace{0.5em}\textsf{29.24} & \hspace{0.5em}\textsf{30.10} & \hspace{0.5em}\textsf{3.49} \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{2.4pt}}}\textsf{RKO-LIO} & \textsf{15.95} & \textsf{53.36} & \textsf{27.90} & \hspace{0.5em}\textsf{77.19} & \hspace{0.5em}\textsf{32.89} & \textsf{54.74} \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{28.45em}{2.4pt}}} & \textsf{RKO-LIO} & \textsf{15.95} & \textsf{53.36} & \textsf{27.90} & \hspace{0.5em}\textsf{77.19} & \hspace{0.5em}\textsf{32.89} & \textsf{54.74} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{KISS-ICP} & \textsf{19.75} & \textsf{54.01} & \textsf{31.35} & \textsf{107.43} & \hspace{0.5em}\textsf{37.12} & \textsf{23.45} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{GenZ-ICP} & \textsf{43.92} & \textsf{53.51} & \textsf{70.57} & \textsf{206.61} & \textsf{108.71} & \textsf{52.24} \\
 \textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{FLOAM} & \textsf{12.29} & \textsf{16.88} & \hspace{0.5em}\textsf{5.73} & \hspace{0.5em}\textsf{46.51} & \hspace{0.5em}\textsf{19.13} & \hspace{0.5em}\textsf{8.35} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{0.4pt}}}\textsf{CT-ICP} & \hspace{0.5em}\textsf{9.68} & \hspace{1.25em}\textsf{—} & \hspace{1.25em}\textsf{—} & \hspace{1.75em}\textsf{—} & \hspace{1.75em}\textsf{—} & \hspace{1.25em}\textsf{—} \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{25.10em}{1.2pt}}}\textsf{I2EKF-LO} & \hspace{0.5em}\textsf{9.66} & \textsf{11.62} & \textsf{29.54} & \hspace{0.5em}\textsf{67.02} & \hspace{0.5em}\textsf{29.53} & \textsf{22.67} \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{28.45em}{1.2pt}}} & \textsf{I2EKF-LO} & \hspace{0.5em}\textsf{9.66} & \textsf{11.62} & \textsf{29.54} & \hspace{0.5em}\textsf{67.02} & \hspace{0.5em}\textsf{29.53} & \textsf{22.67} \\
 \end{array}
 $$
-
-[Algorithm repositories](#algorithm-repositories)
 
 ### Livox LiDAR
 
@@ -521,7 +522,7 @@ $$
 
 $$
 \begin{array}{llrrrrrr}
-\textsf{\textbf{Group}} & {\color{#6e7781}\rlap{\rule[1em]{16.60em}{1.2pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{1.2pt}}}\textsf{\textbf{Algorithm}} & \textsf{\textbf{00}} & \textsf{\textbf{01}} & \textsf{\textbf{02}} & \textsf{\textbf{03}} & \textsf{\textbf{04}} & \textsf{\textbf{05}}   \\
+{\color{#6e7781}\rlap{\rule[1em]{19.95em}{1.2pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{19.95em}{1.2pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \textsf{\textbf{00}} & \textsf{\textbf{01}} & \textsf{\textbf{02}} & \textsf{\textbf{03}} & \textsf{\textbf{04}} & \textsf{\textbf{05}}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{FAST-LIO2} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{iG-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{PV-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
@@ -530,16 +531,14 @@ $$
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{SE(3)-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{BIEVR-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{GenZ-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{2.4pt}}}\textsf{RKO-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{19.95em}{2.4pt}}} & \textsf{RKO-LIO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{KISS-ICP} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{GenZ-ICP} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
 \textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{FLOAM} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{0.4pt}}}\textsf{CT-ICP} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{16.60em}{1.2pt}}}\textsf{I2EKF-LO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{19.95em}{1.2pt}}} & \textsf{I2EKF-LO} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—} & \textsf{—}   \\
 \end{array}
 $$
-
-[Algorithm repositories](#algorithm-repositories)
 
 ### Ouster LiDAR
 
@@ -549,7 +548,7 @@ $$
 
 $$
 \begin{array}{llrrr}
-\textsf{\textbf{Group}} & {\color{#6e7781}\rlap{\rule[1em]{11.20em}{1.2pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{1.2pt}}}\textsf{\textbf{Algorithm}} & \textsf{\textbf{03}} & \textsf{\textbf{04}} & \textsf{\textbf{05}}   \\
+{\color{#6e7781}\rlap{\rule[1em]{14.55em}{1.2pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{14.55em}{1.2pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \textsf{\textbf{03}} & \textsf{\textbf{04}} & \textsf{\textbf{05}}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{FAST-LIO2} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{iG-LIO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{PV-LIO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
@@ -558,21 +557,14 @@ $$
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{SE(3)-LIO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{BIEVR-LIO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{GenZ-LIO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{2.4pt}}}\textsf{RKO-LIO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{14.55em}{2.4pt}}} & \textsf{RKO-LIO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{KISS-ICP} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{GenZ-ICP} & \textsf{—} & \textsf{—} & \textsf{—}   \\
 \textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{FLOAM} & \textsf{—} & \textsf{—} & \textsf{—}   \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{0.4pt}}}\textsf{CT-ICP} & \textsf{—} & \textsf{—} & \textsf{—}   \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{11.20em}{1.2pt}}}\textsf{I2EKF-LO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{14.55em}{1.2pt}}} & \textsf{I2EKF-LO} & \textsf{—} & \textsf{—} & \textsf{—}   \\
 \end{array}
 $$
-
-[Algorithm repositories](#algorithm-repositories)
-
-### Algorithm repositories
-
-- **LIO:** [FAST-LIO2](https://github.com/hku-mars/FAST_LIO) · [iG-LIO](https://github.com/zijiechenrobotics/ig_lio) · [PV-LIO](https://github.com/HViktorTsoi/PV-LIO) · [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM) · [Liorf](https://github.com/YJZLuckyBoy/liorf) · [SE(3)-LIO](https://github.com/url-kaist/se3-lio) · [BIEVR-LIO](https://github.com/ethz-asl/BIEVR-LIO) · [GenZ-LIO](https://github.com/cocel-postech/genz-lio) · [RKO-LIO](https://github.com/PRBonn/rko_lio)
-- **LO:** [KISS-ICP](https://github.com/PRBonn/kiss-icp) · [GenZ-ICP](https://github.com/cocel-postech/genz-icp) · [FLOAM](https://github.com/wh200720041/floam) · [CT-ICP](https://github.com/jedeschaud/ct_icp) · [I2EKF-LO](https://github.com/YWL0720/I2EKF-LO)
 
 ---
 
