@@ -521,13 +521,15 @@ $$
 
 $$
 \begin{array}{llrrrrrr}
-{\color{#6e7781}\rlap{\rule[1em]{25.95em}{2.4pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{25.95em}{2.4pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \hspace{0.625em}\textsf{\textbf{00}}\hspace{0.625em} & \hspace{0.375em}\textsf{\textbf{01}}\hspace{0.375em} & \hspace{0.375em}\textsf{\textbf{02}}\hspace{0.375em} & \hspace{0.625em}\textsf{\textbf{03}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{04}}\hspace{0.625em} & \hspace{0.375em}\textsf{\textbf{05}}\hspace{0.375em} \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{22.60em}{0.4pt}}}\textsf{FAST-LIO2} & \textsf{20.74} & {\color{#218bff}\textsf{1.07}} & \textsf{4.05} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{4.08}}} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{2.05}}} & \textsf{1.62} \\
-\textsf{\textbf{LIO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{22.60em}{0.4pt}}}\textsf{SE(3)-LIO} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{1.50}}} & \textsf{1.66} & \textsf{3.88} & \hspace{0.5em}\textsf{6.94} & \hspace{0.5em}{\color{#218bff}\textsf{2.95}} & \textsf{3.70} \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{22.60em}{0.4pt}}}\textsf{GenZ-LIO} & {\color{#218bff}\textsf{14.79}} & \textsf{1.27} & \textsf{4.06} & \textsf{12.17} & \hspace{0.5em}\textsf{3.48} & \textsf{1.86} \\
-{\color{#6e7781}\rlap{\rule[-0.35em]{25.95em}{2.4pt}}} & \textsf{RKO-LIO} & \textsf{21.61} & \textsf{1.61} & {\color{#218bff}\textsf{2.71}} & \hspace{0.5em}{\color{#218bff}\textsf{5.98}} & \textsf{26.28} & \textsf{5.44} \\
-\textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{22.60em}{0.4pt}}}\textsf{KISS-ICP} & \textsf{20.94} & {\color{#2da44e}\textsf{\textbf{0.90}}} & \textsf{3.54} & \textsf{26.25} & \hspace{0.5em}\textsf{7.07} & {\color{#218bff}\textsf{0.72}} \\
-{\color{#6e7781}\rlap{\rule[-0.35em]{25.95em}{2.4pt}}} & \textsf{GenZ-ICP} & \textsf{21.46} & \textsf{1.48} & {\color{#2da44e}\textsf{\textbf{2.32}}} & \hspace{0.5em}\textsf{6.64} & \hspace{0.5em}\textsf{9.59} & {\color{#2da44e}\textsf{\textbf{0.69}}} \\
+{\color{#6e7781}\rlap{\rule[1em]{26.45em}{2.4pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{26.45em}{2.4pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \hspace{0.625em}\textsf{\textbf{00}}\hspace{0.625em} & \hspace{0.375em}\textsf{\textbf{01}}\hspace{0.375em} & \hspace{0.625em}\textsf{\textbf{02}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{03}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{04}}\hspace{0.625em} & \hspace{0.375em}\textsf{\textbf{05}}\hspace{0.375em} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{23.10em}{0.4pt}}}\textsf{FAST-LIO2} & \textsf{20.74} & \textsf{1.07} & \hspace{0.5em}\textsf{4.05} & \hspace{0.5em}\textsf{4.08} & \hspace{0.5em}{\color{#218bff}\textsf{2.05}} & \textsf{1.62} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{23.10em}{0.4pt}}}\textsf{iG-LIO} & \textsf{21.45} & \textsf{2.38} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{1.38}}} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{1.40}}} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{1.62}}} & {\color{#2da44e}\textsf{\textbf{0.66}}} \\
+\textsf{\textbf{LIO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{23.10em}{0.4pt}}}\textsf{SE(3)-LIO} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{1.50}}} & \textsf{1.66} & \hspace{0.5em}\textsf{3.88} & \hspace{0.5em}\textsf{6.94} & \hspace{0.5em}\textsf{2.95} & \textsf{3.70} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{23.10em}{0.4pt}}}\textsf{BIEVR-LIO} & \textsf{21.70} & {\color{#218bff}\textsf{1.03}} & \textsf{30.75} & \hspace{0.5em}{\color{#218bff}\textsf{1.77}} & \textsf{13.49} & \textsf{0.73} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{23.10em}{0.4pt}}}\textsf{GenZ-LIO} & {\color{#218bff}\textsf{14.79}} & \textsf{1.27} & \hspace{0.5em}\textsf{4.06} & \textsf{12.17} & \hspace{0.5em}\textsf{3.48} & \textsf{1.86} \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{26.45em}{2.4pt}}} & \textsf{RKO-LIO} & \textsf{21.61} & \textsf{1.61} & \hspace{0.5em}\textsf{2.71} & \hspace{0.5em}\textsf{5.98} & \textsf{26.28} & \textsf{5.44} \\
+\textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{23.10em}{0.4pt}}}\textsf{KISS-ICP} & \textsf{20.94} & {\color{#2da44e}\textsf{\textbf{0.90}}} & \hspace{0.5em}\textsf{3.54} & \textsf{26.25} & \hspace{0.5em}\textsf{7.07} & \textsf{0.72} \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{26.45em}{2.4pt}}} & \textsf{GenZ-ICP} & \textsf{21.46} & \textsf{1.48} & \hspace{0.5em}{\color{#218bff}\textsf{2.32}} & \hspace{0.5em}\textsf{6.64} & \hspace{0.5em}\textsf{9.59} & {\color{#218bff}\textsf{0.69}} \\
 \end{array}
 $$
 
