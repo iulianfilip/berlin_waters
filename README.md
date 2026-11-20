@@ -543,12 +543,13 @@ $$
 \begin{array}{llrrr}
 {\color{#6e7781}\rlap{\rule[1em]{19.30em}{2.4pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{19.30em}{2.4pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \hspace{0.625em}\textsf{\textbf{03}}\hspace{0.625em} & \hspace{0.875em}\textsf{\textbf{04}}\hspace{0.875em} & \hspace{0.875em}\textsf{\textbf{05}}\hspace{0.875em} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{15.95em}{0.4pt}}}\textsf{FAST-LIO2} & \textsf{19.78} & \hspace{0.5em}\textsf{19.97} & \textsf{288.55} \\
- & {\color{#6e7781}\rlap{\rule[-0.35em]{15.95em}{0.4pt}}}\textsf{iG-LIO} & {\color{#2da44e}\textsf{\textbf{10.57}}} & \hspace{0.5em}{\color{#218bff}\textsf{18.77}} & \hspace{1em}{\color{#218bff}\textsf{1.05}} \\
-\textsf{\textbf{LIO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{15.95em}{0.4pt}}}\textsf{BIEVR-LIO} & \textsf{14.87} & \textsf{189.10} & \hspace{1em}\textsf{2.14} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{15.95em}{0.4pt}}}\textsf{iG-LIO} & {\color{#2da44e}\textsf{\textbf{10.57}}} & \hspace{0.5em}\textsf{18.77} & \hspace{1em}{\color{#218bff}\textsf{1.05}} \\
+\textsf{\textbf{LIO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{15.95em}{0.4pt}}}\textsf{SE(3)-LIO} & {\color{#218bff}\textsf{13.12}} & \hspace{0.5em}{\color{#218bff}\textsf{10.38}} & \hspace{1em}\textsf{1.37} \\
+ & {\color{#6e7781}\rlap{\rule[-0.35em]{15.95em}{0.4pt}}}\textsf{BIEVR-LIO} & \textsf{14.87} & \textsf{189.10} & \hspace{1em}\textsf{2.14} \\
  & {\color{#6e7781}\rlap{\rule[-0.35em]{15.95em}{0.4pt}}}\textsf{GenZ-LIO} & \textsf{48.57} & \hspace{0.5em}\textsf{41.45} & \hspace{1em}\textsf{2.01} \\
 {\color{#6e7781}\rlap{\rule[-0.35em]{19.30em}{2.4pt}}} & \textsf{RKO-LIO} & \textsf{24.69} & \hspace{0.5em}\textsf{43.26} & \hspace{1em}{\color{#2da44e}\textsf{\textbf{0.97}}} \\
 \textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{15.95em}{0.4pt}}}\textsf{KISS-ICP} & \textsf{25.46} & \hspace{0.5em}\textsf{28.44} & \hspace{1em}\textsf{3.58} \\
-{\color{#6e7781}\rlap{\rule[-0.35em]{19.30em}{2.4pt}}} & \textsf{GenZ-ICP} & {\color{#218bff}\textsf{13.94}} & \hspace{1em}{\color{#2da44e}\textsf{\textbf{9.26}}} & \hspace{1em}\textsf{1.52} \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{19.30em}{2.4pt}}} & \textsf{GenZ-ICP} & \textsf{13.94} & \hspace{1em}{\color{#2da44e}\textsf{\textbf{9.26}}} & \hspace{1em}\textsf{1.52} \\
 \end{array}
 $$
 
