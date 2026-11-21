@@ -486,10 +486,11 @@ The following scenes cover overlapping environments at different times, supporti
 
 ## SLAM Benchmark
 
-We benchmark SLAM pipelines separately for each available LiDAR on training scenes 00–05 using Absolute Trajectory Error (ATE).
+We benchmark SLAM pipelines separately for each available LiDAR and the stereo camera on training scenes 00–05 using Absolute Trajectory Error (ATE).
 
 - **LIO:** [FAST-LIO2](https://github.com/hku-mars/FAST_LIO) · [iG-LIO](https://github.com/zijiechenrobotics/ig_lio) · [PV-LIO](https://github.com/HViktorTsoi/PV-LIO) · [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM) · [Liorf](https://github.com/YJZLuckyBoy/liorf) · [SE(3)-LIO](https://github.com/url-kaist/se3-lio) · [BIEVR-LIO](https://github.com/ethz-asl/BIEVR-LIO) · [GenZ-LIO](https://github.com/cocel-postech/genz-lio) · [RKO-LIO](https://github.com/PRBonn/rko_lio)
 - **LO:** [KISS-ICP](https://github.com/PRBonn/kiss-icp) · [GenZ-ICP](https://github.com/cocel-postech/genz-icp) · [FLOAM](https://github.com/wh200720041/floam) · [I2EKF-LO](https://github.com/YWL0720/I2EKF-LO)
+- **Stereo:** [OpenVINS](https://github.com/rpng/open_vins) · [VINS-Fusion](https://github.com/HKUST-Aerial-Robotics/VINS-Fusion) · [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)
 
 ### Velodyne LiDAR
 
@@ -550,6 +551,19 @@ $$
 {\color{#6e7781}\rlap{\rule[-0.35em]{19.30em}{2.4pt}}} & \textsf{RKO-LIO} & \textsf{24.69} & \hspace{0.5em}\textsf{43.26} & \hspace{1em}{\color{#2da44e}\textsf{\textbf{0.97}}} \\
 \textsf{\textbf{LO}} & {\color{#6e7781}\rlap{\rule[-0.35em]{15.95em}{0.4pt}}}\textsf{KISS-ICP} & \textsf{25.46} & \hspace{0.5em}\textsf{28.44} & \hspace{1em}\textsf{3.58} \\
 {\color{#6e7781}\rlap{\rule[-0.35em]{19.30em}{2.4pt}}} & \textsf{GenZ-ICP} & \textsf{13.94} & \hspace{1em}{\color{#2da44e}\textsf{\textbf{9.26}}} & \hspace{1em}\textsf{1.52} \\
+\end{array}
+$$
+
+### Stereo Camera
+
+#### ATE position [m], $\color{#2da44e}{\textsf{Best}}$ $\color{#218bff}{\textsf{Second best}}$
+
+$$
+\begin{array}{lrrrrrr}
+{\color{#6e7781}\rlap{\rule[1em]{27.60em}{2.4pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{27.60em}{2.4pt}}}\textsf{\textbf{Algorithm}} & \hspace{0.625em}\textsf{\textbf{00}}\hspace{0.625em} & \hspace{0.875em}\textsf{\textbf{01}}\hspace{0.875em} & \hspace{0.875em}\textsf{\textbf{02}}\hspace{0.875em} & \hspace{0.875em}\textsf{\textbf{03}}\hspace{0.875em} & \hspace{0.875em}\textsf{\textbf{04}}\hspace{0.875em} & \hspace{0.875em}\textsf{\textbf{05}}\hspace{0.875em} \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{27.60em}{0.4pt}}}\textsf{OpenVINS} & \textsf{95.14} & \textsf{149.77} & \hspace{0.5em}{\color{#218bff}\textsf{93.42}} & \textsf{395.75} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{48.78}}} & \hspace{0.5em}{\color{#218bff}\textsf{86.91}} \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{27.60em}{0.4pt}}}\textsf{VINS-Fusion} & {\color{#218bff}\textsf{77.59}} & \hspace{0.5em}{\color{#218bff}\textsf{77.64}} & \textsf{150.07} & {\color{#2da44e}\textsf{\textbf{141.51}}} & {\color{#218bff}\textsf{121.48}} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{84.18}}} \\
+{\color{#6e7781}\rlap{\rule[-0.35em]{27.60em}{2.4pt}}}\textsf{ORB-SLAM3} & {\color{#2da44e}\textsf{\textbf{52.86}}} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{25.15}}} & \hspace{0.5em}{\color{#2da44e}\textsf{\textbf{67.44}}} & {\color{#218bff}\textsf{318.82}} & \textsf{155.76} & \textsf{105.22} \\
 \end{array}
 $$
 
