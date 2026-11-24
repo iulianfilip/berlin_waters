@@ -1,3 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="144" viewBox="0 0 24 144" role="img" aria-label="LiDAR set">
-  <text transform="translate(18 72) rotate(-90)" text-anchor="middle" fill="#6e7781" font-family="Arial, sans-serif" font-size="16" font-weight="bold">LiDAR set</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="144" viewBox="0 0 24 144" role="img" aria-label="LiDAR">
+  <text transform="translate(12 72) rotate(-90)" text-anchor="middle" dominant-baseline="middle" fill="#6e7781" font-family="Arial, sans-serif" font-size="16" font-weight="bold">LiDAR</text>
 </svg>
