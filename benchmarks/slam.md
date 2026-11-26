@@ -8,9 +8,12 @@ We benchmark SLAM pipelines separately for each available LiDAR and the stereo c
 
 ## Velodyne LiDAR
 
+<!--
 ### ATE position [m], $\color{#2da44e}{\textsf{Best}}$ $\color{#218bff}{\textsf{Second best}}$
+-->
 
 <!-- Explicit gray rule overlays keep horizontal separators visible in GitHub MathML. Thick rules span the full table; thin row separators start at the algorithm column. Widths match the current table contents. -->
+<!--
 $$
 \begin{array}{llrrrrrr}
 {\color{#6e7781}\rlap{\rule[1em]{28.45em}{2.4pt}}}{\color{#6e7781}\rlap{\rule[-0.35em]{28.45em}{2.4pt}}}\textsf{\textbf{Group}} & \textsf{\textbf{Algorithm}} & \hspace{0.625em}\textsf{\textbf{00}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{01}}\hspace{0.625em} & \hspace{0.625em}\textsf{\textbf{02}}\hspace{0.625em} & \hspace{0.875em}\textsf{\textbf{03}}\hspace{0.875em} & \hspace{0.875em}\textsf{\textbf{04}}\hspace{0.875em} & \hspace{0.625em}\textsf{\textbf{05}}\hspace{0.625em} \\
@@ -29,12 +32,21 @@ $$
 {\color{#6e7781}\rlap{\rule[-0.35em]{28.45em}{2.4pt}}} & \textsf{I2EKF-LO} & \hspace{0.5em}\textsf{9.66} & \textsf{11.62} & \textsf{29.54} & \hspace{0.5em}\textsf{67.02} & \hspace{0.5em}\textsf{29.53} & \textsf{22.67} \\
 \end{array}
 $$
+-->
 
 ### Velodyne LiDAR: ATE position [m]
 
 [![Velodyne LiDAR ATE table in robotics paper style](../figures/velodyne_ate_robotics.png)](../figures/velodyne_ate_robotics.pdf)
 
 [PDF](../figures/velodyne_ate_robotics.pdf) · [LaTeX source](velodyne_ate_robotics.tex)
+
+### Velodyne LiDAR: ATE and RTE layout
+
+Only ATE position values are measured results; `00.000` denotes a placeholder for the other errors.
+
+[![Velodyne LiDAR table with grouped scene headers and four error columns per scene](../figures/velodyne_ate_rte_grouped.png)](../figures/velodyne_ate_rte_grouped.pdf)
+
+[PDF](../figures/velodyne_ate_rte_grouped.pdf) · [LaTeX source](velodyne_ate_rte_grouped.tex)
 
 ## Livox LiDAR
 
