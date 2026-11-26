@@ -30,26 +30,6 @@ $$
 \end{array}
 $$
 
-### Standard GitHub table
-
-**ATE position [m].** **Best** · <ins>Second best</ins>.
-
-| Group | Algorithm | 00 | 01 | 02 | 03 | 04 | 05 |
-| :---: | :--- | ---: | ---: | ---: | ---: | ---: | ---: |
-| LIO | FAST-LIO2 | 2.03 | 2.60 | 2.73 | 34.16 | 12.00 | 4.37 |
-|  | iG-LIO | <ins>0.94</ins> | 2.56 | 2.78 | <ins>5.74</ins> | 10.87 | 1.61 |
-|  | PV-LIO | 1.77 | <ins>1.31</ins> | 2.21 | 7.47 | **3.84** | <ins>0.92</ins> |
-|  | LIO-SAM | 1.08 | 3.26 | <ins>1.91</ins> | **4.70** | 5.44 | 4.90 |
-|  | Liorf | 1.06 | 3.06 | 2.36 | 15.33 | 5.43 | 7.18 |
-|  | SE(3)-LIO | 1.40 | **1.17** | 2.14 | 11.68 | 4.71 | 1.16 |
-|  | BIEVR-LIO | **0.88** | 12.59 | 4.07 | 11.87 | <ins>4.24</ins> | 2.31 |
-|  | GenZ-LIO | 1.23 | 1.40 | **1.24** | 9.82 | 8.63 | **0.91** |
-|  | RKO-LIO | 15.95 | 53.36 | 27.90 | 77.19 | 32.89 | 54.74 |
-| LO | KISS-ICP | 19.75 | 54.01 | 31.35 | 107.43 | 37.12 | 23.45 |
-|  | GenZ-ICP | 43.92 | 53.51 | 70.57 | 206.61 | 108.71 | 52.24 |
-|  | FLOAM | 12.29 | 16.88 | 5.73 | 46.51 | 19.13 | 8.35 |
-|  | I2EKF-LO | 9.66 | 11.62 | 29.54 | 67.02 | 29.53 | 22.67 |
-
 ### Robotics paper table (PDF)
 
 [![Velodyne LiDAR ATE table in robotics paper style](../figures/velodyne_ate_robotics.png)](../figures/velodyne_ate_robotics.pdf)

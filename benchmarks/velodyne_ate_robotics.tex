@@ -1,29 +1,35 @@
 \documentclass[border=8pt]{standalone}
-\usepackage{booktabs,multirow,graphicx,fontspec}
+\usepackage{booktabs,multirow,graphicx,fontspec,xcolor}
 \setmainfont{texgyretermes-regular.otf}[
   BoldFont=texgyretermes-bold.otf,
   ItalicFont=texgyretermes-italic.otf,
   BoldItalicFont=texgyretermes-bolditalic.otf
 ]
+\definecolor{bestTint}{HTML}{DDF4DF}
+\definecolor{secondTint}{HTML}{DDF4FF}
+\newcommand{\atehighlight}[2]{%
+  \begingroup
+  \setlength{\fboxsep}{2pt}%
+  \kern-\fboxsep\colorbox{#1}{\strut #2}\kern-\fboxsep
+  \endgroup
+}
 \begin{document}
 \begin{minipage}{17.8cm}
 \centering
-{\small\textbf{TABLE I}\\[3pt]\textsc{Velodyne LiDAR: Absolute Trajectory Error (Position)}}
-\par\vspace{7pt}
 \renewcommand{\arraystretch}{1.15}
 \setlength{\tabcolsep}{7pt}
 \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}clrrrrrr@{}}
 \toprule[1pt]
-\textbf{Group} & \textbf{Algorithm} & \multicolumn{1}{c}{\textbf{00}} & \multicolumn{1}{c}{\textbf{01}} & \multicolumn{1}{c}{\textbf{02}} & \multicolumn{1}{c}{\textbf{03}} & \multicolumn{1}{c}{\textbf{04}} & \multicolumn{1}{c}{\textbf{05}} \\
+\textbf{Group} & \textbf{Algorithm} & \multicolumn{1}{c}{\textbf{berlin\_00}} & \multicolumn{1}{c}{\textbf{berlin\_01}} & \multicolumn{1}{c}{\textbf{berlin\_02}} & \multicolumn{1}{c}{\textbf{berlin\_03}} & \multicolumn{1}{c}{\textbf{berlin\_04}} & \multicolumn{1}{c}{\textbf{berlin\_05}} \\
 \midrule[0.7pt]
 \multirow{9}{*}{\rotatebox[origin=c]{90}{LIO}} & FAST-LIO2 & 2.03 & 2.60 & 2.73 & 34.16 & 12.00 & 4.37 \\
- & iG-LIO & \underline{0.94} & 2.56 & 2.78 & \underline{5.74} & 10.87 & 1.61 \\
- & PV-LIO & 1.77 & \underline{1.31} & 2.21 & 7.47 & \textbf{3.84} & \underline{0.92} \\
- & LIO-SAM & 1.08 & 3.26 & \underline{1.91} & \textbf{4.70} & 5.44 & 4.90 \\
+ & iG-LIO & \atehighlight{secondTint}{0.94} & 2.56 & 2.78 & \atehighlight{secondTint}{5.74} & 10.87 & 1.61 \\
+ & PV-LIO & 1.77 & \atehighlight{secondTint}{1.31} & 2.21 & 7.47 & \atehighlight{bestTint}{3.84} & \atehighlight{secondTint}{0.92} \\
+ & LIO-SAM & 1.08 & 3.26 & \atehighlight{secondTint}{1.91} & \atehighlight{bestTint}{4.70} & 5.44 & 4.90 \\
  & Liorf & 1.06 & 3.06 & 2.36 & 15.33 & 5.43 & 7.18 \\
- & SE(3)-LIO & 1.40 & \textbf{1.17} & 2.14 & 11.68 & 4.71 & 1.16 \\
- & BIEVR-LIO & \textbf{0.88} & 12.59 & 4.07 & 11.87 & \underline{4.24} & 2.31 \\
- & GenZ-LIO & 1.23 & 1.40 & \textbf{1.24} & 9.82 & 8.63 & \textbf{0.91} \\
+ & SE(3)-LIO & 1.40 & \atehighlight{bestTint}{1.17} & 2.14 & 11.68 & 4.71 & 1.16 \\
+ & BIEVR-LIO & \atehighlight{bestTint}{0.88} & 12.59 & 4.07 & 11.87 & \atehighlight{secondTint}{4.24} & 2.31 \\
+ & GenZ-LIO & 1.23 & 1.40 & \atehighlight{bestTint}{1.24} & 9.82 & 8.63 & \atehighlight{bestTint}{0.91} \\
  & RKO-LIO & 15.95 & 53.36 & 27.90 & 77.19 & 32.89 & 54.74 \\
 \midrule[1pt]
 \multirow{4}{*}{\rotatebox[origin=c]{90}{LO}} & KISS-ICP & 19.75 & 54.01 & 31.35 & 107.43 & 37.12 & 23.45 \\
@@ -34,6 +40,6 @@
 \end{tabular*}
 \par\vspace{6pt}
 {\footnotesize\raggedright ATE position in meters on training scenes 00--05. Lower is better.
-\textbf{Bold}: best per scene; \underline{underlined}: second best.\par}
+\atehighlight{bestTint}{Best}\quad\atehighlight{secondTint}{Second best}.\par}
 \end{minipage}
 \end{document}
