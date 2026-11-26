@@ -1,0 +1,47 @@
+\documentclass[border=8pt]{standalone}
+\usepackage{booktabs,multirow,graphicx,fontspec,xcolor}
+\setmainfont{texgyretermes-regular.otf}[
+  BoldFont=texgyretermes-bold.otf,
+  ItalicFont=texgyretermes-italic.otf,
+  BoldItalicFont=texgyretermes-bolditalic.otf
+]
+\definecolor{bestTint}{HTML}{85D99A}
+\definecolor{secondTint}{HTML}{80C3FF}
+\newcommand{\atehighlight}[2]{%
+  \begingroup
+  \setlength{\fboxsep}{2pt}%
+  \kern-\fboxsep\colorbox{#1}{\strut #2}\kern-\fboxsep
+  \endgroup
+}
+\begin{document}
+\begin{minipage}{22cm}
+\centering
+\fontsize{9pt}{11pt}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cl|rr|rr|rr|rr|rr|rr@{}}
+\toprule[1pt]
+ & & \multicolumn{2}{c|}{\textbf{berlin\_00}} & \multicolumn{2}{c|}{\textbf{berlin\_01}} & \multicolumn{2}{c|}{\textbf{berlin\_02}} & \multicolumn{2}{c|}{\textbf{berlin\_03}} & \multicolumn{2}{c|}{\textbf{berlin\_04}} & \multicolumn{2}{c}{\textbf{berlin\_05}} \\
+\textbf{Group} & \textbf{Algorithm} & $\mathrm{ATE}_{t}$ & $\mathrm{ATE}_{r}$ & $\mathrm{ATE}_{t}$ & $\mathrm{ATE}_{r}$ & $\mathrm{ATE}_{t}$ & $\mathrm{ATE}_{r}$ & $\mathrm{ATE}_{t}$ & $\mathrm{ATE}_{r}$ & $\mathrm{ATE}_{t}$ & $\mathrm{ATE}_{r}$ & $\mathrm{ATE}_{t}$ & $\mathrm{ATE}_{r}$ \\
+\midrule[0.7pt]
+\multirow{9}{*}{LIO} & FAST-LIO2 & 2.03 & 00.000 & 2.60 & 00.000 & 2.73 & 00.000 & 34.16 & 00.000 & 12.00 & 00.000 & 4.37 & 00.000 \\
+ & iG-LIO & \atehighlight{secondTint}{0.94} & 00.000 & 2.56 & 00.000 & 2.78 & 00.000 & \atehighlight{secondTint}{5.74} & 00.000 & 10.87 & 00.000 & 1.61 & 00.000 \\
+ & PV-LIO & 1.77 & 00.000 & \atehighlight{secondTint}{1.31} & 00.000 & 2.21 & 00.000 & 7.47 & 00.000 & \atehighlight{bestTint}{3.84} & 00.000 & \atehighlight{secondTint}{0.92} & 00.000 \\
+ & LIO-SAM & 1.08 & 00.000 & 3.26 & 00.000 & \atehighlight{secondTint}{1.91} & 00.000 & \atehighlight{bestTint}{4.70} & 00.000 & 5.44 & 00.000 & 4.90 & 00.000 \\
+ & Liorf & 1.06 & 00.000 & 3.06 & 00.000 & 2.36 & 00.000 & 15.33 & 00.000 & 5.43 & 00.000 & 7.18 & 00.000 \\
+ & SE(3)-LIO & 1.40 & 00.000 & \atehighlight{bestTint}{1.17} & 00.000 & 2.14 & 00.000 & 11.68 & 00.000 & 4.71 & 00.000 & 1.16 & 00.000 \\
+ & BIEVR-LIO & \atehighlight{bestTint}{0.88} & 00.000 & 12.59 & 00.000 & 4.07 & 00.000 & 11.87 & 00.000 & \atehighlight{secondTint}{4.24} & 00.000 & 2.31 & 00.000 \\
+ & GenZ-LIO & 1.23 & 00.000 & 1.40 & 00.000 & \atehighlight{bestTint}{1.24} & 00.000 & 9.82 & 00.000 & 8.63 & 00.000 & \atehighlight{bestTint}{0.91} & 00.000 \\
+ & RKO-LIO & 15.95 & 00.000 & 53.36 & 00.000 & 27.90 & 00.000 & 77.19 & 00.000 & 32.89 & 00.000 & 54.74 & 00.000 \\
+\midrule[1pt]
+\multirow{4}{*}{LO} & KISS-ICP & 19.75 & 00.000 & 54.01 & 00.000 & 31.35 & 00.000 & 107.43 & 00.000 & 37.12 & 00.000 & 23.45 & 00.000 \\
+ & GenZ-ICP & 43.92 & 00.000 & 53.51 & 00.000 & 70.57 & 00.000 & 206.61 & 00.000 & 108.71 & 00.000 & 52.24 & 00.000 \\
+ & FLOAM & 12.29 & 00.000 & 16.88 & 00.000 & 5.73 & 00.000 & 46.51 & 00.000 & 19.13 & 00.000 & 8.35 & 00.000 \\
+ & I2EKF-LO & 9.66 & 00.000 & 11.62 & 00.000 & 29.54 & 00.000 & 67.02 & 00.000 & 29.53 & 00.000 & 22.67 & 00.000 \\
+\bottomrule[1pt]
+\end{tabular*}
+\par\vspace{6pt}
+{\footnotesize\raggedright $\mathrm{ATE}_{t}$ [m], $\mathrm{ATE}_{r}$ [deg]. Rotation values (00.000) are layout placeholders. Lower is better.
+\atehighlight{bestTint}{Best}\quad\atehighlight{secondTint}{Second best} for measured $\mathrm{ATE}_{t}$.\par}
+\end{minipage}
+\end{document}

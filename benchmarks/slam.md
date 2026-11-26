@@ -48,6 +48,22 @@ Only ATE position values are measured results; `00.000` denotes a placeholder fo
 
 [PDF](../figures/velodyne_ate_rte_grouped.pdf) · [LaTeX source](velodyne_ate_rte_grouped.tex)
 
+### Velodyne LiDAR: ATE
+
+Rotation values use `00.000` placeholders.
+
+[![Velodyne LiDAR ATE table with position and rotation columns per scene](../figures/velodyne_ate.png)](../figures/velodyne_ate.pdf)
+
+[PDF](../figures/velodyne_ate.pdf) · [LaTeX source](velodyne_ate.tex)
+
+### Velodyne LiDAR: RPE
+
+All values use `00.000` placeholders.
+
+[![Velodyne LiDAR RPE table with translation and rotation columns per scene](../figures/velodyne_rpe.png)](../figures/velodyne_rpe.pdf)
+
+[PDF](../figures/velodyne_rpe.pdf) · [LaTeX source](velodyne_rpe.tex)
+
 ## Livox LiDAR
 
 ### ATE position [m], $\color{#2da44e}{\textsf{Best}}$ $\color{#218bff}{\textsf{Second best}}$

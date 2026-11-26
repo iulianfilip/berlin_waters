@@ -1,0 +1,46 @@
+\documentclass[border=8pt]{standalone}
+\usepackage{booktabs,multirow,graphicx,fontspec,xcolor}
+\setmainfont{texgyretermes-regular.otf}[
+  BoldFont=texgyretermes-bold.otf,
+  ItalicFont=texgyretermes-italic.otf,
+  BoldItalicFont=texgyretermes-bolditalic.otf
+]
+\definecolor{bestTint}{HTML}{85D99A}
+\definecolor{secondTint}{HTML}{80C3FF}
+\newcommand{\atehighlight}[2]{%
+  \begingroup
+  \setlength{\fboxsep}{2pt}%
+  \kern-\fboxsep\colorbox{#1}{\strut #2}\kern-\fboxsep
+  \endgroup
+}
+\begin{document}
+\begin{minipage}{22cm}
+\centering
+\fontsize{9pt}{11pt}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cl|rr|rr|rr|rr|rr|rr@{}}
+\toprule[1pt]
+ & & \multicolumn{2}{c|}{\textbf{berlin\_00}} & \multicolumn{2}{c|}{\textbf{berlin\_01}} & \multicolumn{2}{c|}{\textbf{berlin\_02}} & \multicolumn{2}{c|}{\textbf{berlin\_03}} & \multicolumn{2}{c|}{\textbf{berlin\_04}} & \multicolumn{2}{c}{\textbf{berlin\_05}} \\
+\textbf{Group} & \textbf{Algorithm} & $\mathrm{RPE}_{t}$ & $\mathrm{RPE}_{r}$ & $\mathrm{RPE}_{t}$ & $\mathrm{RPE}_{r}$ & $\mathrm{RPE}_{t}$ & $\mathrm{RPE}_{r}$ & $\mathrm{RPE}_{t}$ & $\mathrm{RPE}_{r}$ & $\mathrm{RPE}_{t}$ & $\mathrm{RPE}_{r}$ & $\mathrm{RPE}_{t}$ & $\mathrm{RPE}_{r}$ \\
+\midrule[0.7pt]
+\multirow{9}{*}{LIO} & FAST-LIO2 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+ & iG-LIO & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+ & PV-LIO & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+ & LIO-SAM & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+ & Liorf & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+ & SE(3)-LIO & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+ & BIEVR-LIO & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+ & GenZ-LIO & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+ & RKO-LIO & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+\midrule[1pt]
+\multirow{4}{*}{LO} & KISS-ICP & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+ & GenZ-ICP & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+ & FLOAM & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+ & I2EKF-LO & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 & 00.000 \\
+\bottomrule[1pt]
+\end{tabular*}
+\par\vspace{6pt}
+{\footnotesize\raggedright $\mathrm{RPE}_{t}$ [\%], $\mathrm{RPE}_{r}$ [deg/100m]. All values (00.000) are layout placeholders.\par}
+\end{minipage}
+\end{document}
