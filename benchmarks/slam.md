@@ -30,7 +30,7 @@ $$
 \end{array}
 $$
 
-### Robotics paper table (PDF)
+### Velodyne LiDAR: ATE position [m]
 
 [![Velodyne LiDAR ATE table in robotics paper style](../figures/velodyne_ate_robotics.png)](../figures/velodyne_ate_robotics.pdf)
 
